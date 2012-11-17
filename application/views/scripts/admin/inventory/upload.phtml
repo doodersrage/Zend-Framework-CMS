@@ -1,0 +1,18 @@
+<div id="adminLeftClm"> <?php echo $this->form ?>
+  <div style="padding:20px;"><a href="/admin_inventory/download/">Download pre-formated file.</a></div>
+  <div id="uploadDoc">
+    <div>
+      <h1>HELP!</h1>
+    </div>
+    <img src="/images/admin/xlsx.png" width="709" height="320" alt="xlsx format" />
+    <div class="adminDoc">
+      <p>The above image shows you how to properly format your XLS or XLSX document. When preparing a spreadsheet for upload be sure to have the first row populated with the column name or left blank as that row will always be considered the "title" column. Columns must always be in the order listed below. (Stock #, Year, Vehicle Make, Vehicle Model, Body Style, Color, VIN) If you happen to place your data within the columns out of the assigned order they will not be read into the system correctly.</p>
+      <p>You will then export the document in a comma delimited CSV file. This can be done by selecting the options displayed in the images below.</p>
+    </div>
+    <img src="/images/admin/csvconv.png" width="717" height="551" alt="xlsx format" />
+    <div class="adminDoc">
+      <p>Once the CSV file has been created you can now upload it using the form above by browsing to wherever is was saved on your local machine.</p>
+    </div>
+  </div>
+</div>
+<div id="adminRightClm"> <a href="/admin_inventory/"><img src="/images/buttons/listing.png" alt="button 1" /></a> <a href="/admin_inventory/edit/"><img src="/images/buttons/button1up.png" alt="button 2" /></a> <a href="/admin_inventory/upload/"><img src="/images/buttons/button2up.png" alt="button 3" /></a> </div>

@@ -1,0 +1,29 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="videos">
+    <table class="adminListing">
+      <tr>
+        <th>Preview</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr>
+        <td align="center"><a href="/upload/images/<?=$row[img]?>" class="imgHlper"><img src="/image/?image=/upload/images/<?=$row[img]?>&width=100&height=100" alt="<?=$row[img]?>" /></a></td>
+        <td align="center"><a href="/admin_slideshow/image-edit/?sid=<?=Zend_Controller_Front::getInstance()->getRequest()->getParam('sid')?>&id=<?=$row[img]?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td align="center"><input type="checkbox" name="delete[]" value="<?=$row[img]?>" /></td>
+      </tr>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+      <tr>
+        <td colspan="5" align="right"><input name="apply" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"> <a href="/admin_slideshow/image-edit/?sid=<?=Zend_Controller_Front::getInstance()->getRequest()->getParam('sid')?>"><img src="/images/buttons/button1up.png" alt="button 1" /></a> </div>

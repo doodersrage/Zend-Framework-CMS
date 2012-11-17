@@ -1,0 +1,75 @@
+<div id="locationsWrap">
+  <div class="locationBlock"> <img src="/images/mobile/ghent.png" alt="ghent button image" width="275" height="37" border="0" usemap="#MapGhent">
+    <map name="MapGhent" id="MapGhent">
+      <area shape="rect" coords="1,1,174,34" href="tel:757-624-9111" />
+      <area shape="rect" coords="180,2,270,34" href="https://ynot-norfolk.foodtecsolutions.com/" />
+    </map>
+    <br>
+    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1517+Colley+Avenue+++Norfolk,+VA+23517&amp;aq=&amp;sll=37.160317,-95.712891&amp;sspn=52.728215,135.263672&amp;ie=UTF8&amp;hq=&amp;hnear=1517+Colley+Ave,+Norfolk,+Virginia+23517&amp;ll=36.868334,-76.29771&amp;spn=0.006575,0.016512&amp;t=h&amp;z=17" target="_blank">1517 Colley Avenue<br>
+  Norfolk, VA 23517</a></div>
+  <div class="locationBlock"> <img src="/images/mobile/greatneck.png" alt="great neck button image" width="275" height="38" border="0" usemap="#MapGN">
+    <map name="MapGN" id="MapGN">
+      <area shape="rect" coords="2,0,178,34" href="tel:757-496-9111" />
+      <area shape="rect" coords="180,2,273,33" href="https://ynot-colonial.foodtecsolutions.com/" />
+    </map>
+    <br>
+    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=2102+Great+Neck+Square+Shopping+Center+Virginia+Beach,+VA+23464+&amp;aq=&amp;sll=36.868334,-76.29771&amp;sspn=0.006575,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=Great+Neck+Square+Shopping+Center,+Virginia+Beach,+Virginia+23454&amp;ll=36.87605,-76.038351&amp;spn=0.006574,0.016512&amp;t=h&amp;z=17" target="_blank">2102 Great Neck Square Shopping Center<br>
+  Virginia Beach, VA 23464 </a></div>
+  <div class="locationBlock"> <img src="/images/mobile/kempsville.png" alt="kempsville button image" width="274" height="39" border="0" usemap="#MapKV">
+    <map name="MapKV" id="MapKV">
+      <area shape="rect" coords="2,1,175,34" href="tel:757-474-6000" />
+      <area shape="rect" coords="178,2,273,34" href="https://ynot-vbeach.foodtecsolutions.com/" />
+    </map>
+    <br>
+    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=5257+Providence+Road+%09Virginia+Beach,+VA+23464+&amp;aq=&amp;sll=36.876059,-76.038351&amp;sspn=0.006574,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=5257+Providence+Rd,+Virginia+Beach,+Virginia+23464&amp;ll=36.81382,-76.169747&amp;spn=0.006579,0.016512&amp;t=h&amp;z=17" target="_blank">5257 Providence Road<br>
+  Virginia Beach, VA 23464 </a></div>
+  <div class="locationBlock"> <img src="/images/mobile/greenbrier.png" alt="greenbrier button image" width="276" height="39" border="0" usemap="#MapGB">
+    <map name="MapGB" id="MapGB">
+      <area shape="rect" coords="3,1,175,32" href="tel:757-382-9111" />
+      <area shape="rect" coords="180,1,272,32" href="https://ynot-chesapeake.foodtecsolutions.com/" />
+    </map>
+    <br>
+    <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1036+Volvo+Parkway,+Suite+7+%09Chesapeake,+VA+23320&amp;aq=&amp;sll=36.81382,-76.169747&amp;sspn=0.006579,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1036+Volvo+Pkwy+%237,+Chesapeake,+Virginia+23320&amp;ll=36.769469,-76.224486&amp;spn=0.006583,0.016512&amp;t=h&amp;z=17" target="_blank">1036 Volvo Parkway, Suite 7<br>
+  Chesapeake, VA 23320</a></div>
+</div>
+<script type="text/javascript">
+window.addEventListener('load', function() {
+  window.setTimeout(function() {
+    var bubble = new google.bookmarkbubble.Bubble();
+
+    var parameter = '/';
+
+    bubble.hasHashParameter = function() {
+      return window.location.hash.indexOf(parameter) != -1;
+    };
+
+    bubble.setHashParameter = function() {
+      if (!this.hasHashParameter()) {
+        window.location.hash += parameter;
+      }
+    };
+
+    bubble.getViewportHeight = function() {
+      window.console.log('Example of how to override getViewportHeight.');
+      return window.innerHeight;
+    };
+
+    bubble.getViewportScrollY = function() {
+      window.console.log('Example of how to override getViewportScrollY.');
+      return window.pageYOffset;
+    };
+
+    bubble.registerScrollHandler = function(handler) {
+      window.console.log('Example of how to override registerScrollHandler.');
+      window.addEventListener('scroll', handler, false);
+    };
+
+    bubble.deregisterScrollHandler = function(handler) {
+      window.console.log('Example of how to override deregisterScrollHandler.');
+      window.removeEventListener('scroll', handler, false);
+    };
+
+    bubble.showIfAllowed();
+  }, 1000);
+}, false);
+</script>

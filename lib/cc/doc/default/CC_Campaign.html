@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class CC_Campaign</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class CC_Campaign</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class that is used for ConstantCampaign CRUD management</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> ConstantContact Dev Team</li>
+				<li><span class="field">version:</span> 2.0.0</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_cc_class.php.html">/cc_class.php</a> (line <span class="field">521</span>)
+		</p>
+		
+				
+		<pre><a href="../default/CC_Utility.html">CC_Utility</a>
+   |
+   --CC_Campaign</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$armedForces" title="details" class="var-name">$armedForces</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$caStates" title="details" class="var-name">$caStates</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sent_recived_debug" title="details" class="var-name">$sent_recived_debug</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$usStates" title="details" class="var-name">$usStates</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																												
+												<div class="method-definition">
+											<span class="method-result">TRUE</span>
+										<a href="#addCampaign" title="details" class="method-name">addCampaign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$campaignXML</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">a</span>
+										<a href="#campaignExists" title="details" class="method-name">campaignExists</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$new_name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Formed</span>
+										<a href="#createCampaignXML" title="details" class="method-name">createCampaignXML</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">TRUE</span>
+										<a href="#deleteCampaign" title="details" class="method-name">deleteCampaign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">TRUE</span>
+										<a href="#editCampaign" title="details" class="method-name">editCampaign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$campaignId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$campaignXML</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getCampaignDetails" title="details" class="method-name">getCampaignDetails</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Bi-Dimenstional</span>
+										<a href="#getCampaigns" title="details" class="method-name">getCampaigns</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$campaign_id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">''</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">a</span>
+										<a href="#getEmailIntro" title="details" class="method-name">getEmailIntro</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$sample</span> = <span class="var-default">'EmailContent'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'html'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">an</span>
+										<a href="#validateCampaign" title="details" class="method-name">validateCampaign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$armedForces" id="$armedForces"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$armedForces</span>
+			 = <span class="var-default">array(&quot;AA&quot;, &quot;AE&quot;, &quot;AP&quot;)</span>			(line <span class="line-number">527</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$caStates" id="$caStates"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$caStates</span>
+			 = <span class="var-default">array(&quot;AB&quot;, &quot;BC&quot;, &quot;MB&quot;, &quot;NB&quot;, &quot;NL&quot;, &quot;NT&quot;, &quot;NS&quot;, &quot;NU&quot;, &quot;ON&quot;, &quot;PE&quot;, &quot;QC&quot;, &quot;SK&quot;, &quot;YT&quot;)</span>			(line <span class="line-number">526</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$sent_recived_debug" id="$sent_recived_debug"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sent_recived_debug</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">524</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+<a name="var$usStates" id="$usStates"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$usStates</span>
+			 = <span class="var-default">array(&quot;AL&quot;, &quot;AK&quot;, &quot;AZ&quot;, &quot;AR&quot;, &quot;CA&quot;, &quot;CO&quot;, &quot;CT&quot;, &quot;DE&quot;, &quot;DC&quot;, &quot;FL&quot;, &quot;GA&quot;, &quot;HI&quot;, &quot;ID&quot;, &quot;IL&quot;, &quot;IN&quot;, &quot;IA&quot;, &quot;KS&quot;, &quot;KY&quot;, &quot;LA&quot;, &quot;ME&quot;, &quot;MD&quot;, &quot;MA&quot;, &quot;MI&quot;, &quot;MN&quot;, &quot;MS&quot;, &quot;MO&quot;, &quot;MT&quot;, &quot;NE&quot;, &quot;NV&quot;, &quot;NH&quot;, &quot;NJ&quot;, &quot;NM&quot;, &quot;NY&quot;, &quot;NC&quot;, &quot;ND&quot;, &quot;OH&quot;, &quot;OK&quot;, &quot;OR&quot;, &quot;PA&quot;, &quot;RI&quot;, &quot;SC&quot;, &quot;SD&quot;, &quot;TN&quot;, &quot;TX&quot;, &quot;UT&quot;, &quot;VT&quot;, &quot;VA&quot;, &quot;WA&quot;, &quot;WV&quot;, &quot;WI&quot;, &quot;WY&quot;)</span>			(line <span class="line-number">525</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../default/CC_Utility.html">CC_Utility</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$actionBy">CC_Utility::$actionBy</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$apikey">CC_Utility::$apikey</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$apiPath">CC_Utility::$apiPath</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$contact_lists">CC_Utility::$contact_lists</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$curl_debug">CC_Utility::$curl_debug</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$doNotIncludeLists">CC_Utility::$doNotIncludeLists</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$force_lists">CC_Utility::$force_lists</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$lastError">CC_Utility::$lastError</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$login">CC_Utility::$login</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$password">CC_Utility::$password</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$requestLogin">CC_Utility::$requestLogin</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../default/CC_Utility.html#var$show_contact_lists">CC_Utility::$show_contact_lists</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodaddCampaign" id="addCampaign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addCampaign</span> (line <span class="line-number">720</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Upload a new campaign to ConstantContact server</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> in case of success or FALSE otherwise</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TRUE</span>
+		<span class="method-name">
+			addCampaign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$campaignXML</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$campaignXML</span><span class="var-description">: - formatted XML with campaign information</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcampaignExists" id="campaignExists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">campaignExists</span> (line <span class="line-number">671</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check if a specific campaign exist already</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> boolean value.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">a</span>
+		<span class="method-name">
+			campaignExists
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">''</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$new_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateCampaignXML" id="createCampaignXML"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createCampaignXML</span> (line <span class="line-number">891</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that compose the needed XML format for a campaign</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XML</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Formed</span>
+		<span class="method-name">
+			createCampaignXML
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteCampaign" id="deleteCampaign"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteCampaign</span> (line <span class="line-number">708</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that delete a camaign; this will exclude</p>
+<p class="description"><p>the removed campaign from overall statistics</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> in case of success or FALSE otherwise</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TRUE</span>
+		<span class="method-name">
+			deleteCampaign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: - campaign id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodeditCampaign" id="editCampaign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">editCampaign</span> (line <span class="line-number">761</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Modifies a campaign</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> in case of success or FALSE otherwise</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">TRUE</span>
+		<span class="method-name">
+			editCampaign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$campaignId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$campaignXML</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$campaignId</span><span class="var-description">: - identifies the id for the modified campaign</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$campaignXML</span><span class="var-description">: - formed XML with campaign information</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCampaignDetails" id="getCampaignDetails"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCampaignDetails</span> (line <span class="line-number">634</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieves all the details for a specific campaign identified by $id.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> with all information about the campaign.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCampaignDetails
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCampaigns" id="getCampaigns"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCampaigns</span> (line <span class="line-number">573</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that retrieves campaingn collections from ConstantCampaign  If campaign_id is mentioned then only mentioned campaign is retrieved.</p>
+<p class="description"><p>If campaign_id represents a status [SENT, DRAFT, RUNNING, SCHEDULED]  only the campaigns with that status will be retrieved</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array with information about campaigns.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Bi-Dimenstional</span>
+		<span class="method-name">
+			getCampaigns
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$campaign_id</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$campaign_id</span><span class="var-description">: [default is empty]</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$page</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetEmailIntro" id="getEmailIntro"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEmailIntro</span> (line <span class="line-number">536</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that returns a html sample for email campaign</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> default content for email content or permission reminder</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">a</span>
+		<span class="method-name">
+			getEmailIntro
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$sample</span> = <span class="var-default">'EmailContent'</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'html'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sample</span><span class="var-description">: [default is EmailContent]: EmailContent, EmailTextContent or  PermissionReminder</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: [default is html]: html or text</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateCampaign" id="validateCampaign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateCampaign</span> (line <span class="line-number">788</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Method that validate the current campaign before sending it to server</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> error message or true</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">an</span>
+		<span class="method-name">
+			validateCampaign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../default/CC_Utility.html">CC_Utility</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../default/CC_Utility.html#method__construct">CC_Utility::__construct()</a></span><br>
+													<span class="method-name"><a href="../default/CC_Utility.html#methoddoServerCall">CC_Utility::doServerCall()</a></span><br>
+													<span class="method-name"><a href="../default/CC_Utility.html#methodgetCountries">CC_Utility::getCountries()</a></span><br>
+													<span class="method-name"><a href="../default/CC_Utility.html#methodgetStates">CC_Utility::getStates()</a></span><br>
+													<span class="method-name"><a href="../default/CC_Utility.html#methodisValidEmail">CC_Utility::isValidEmail()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 14 Nov 2011 23:15:09 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

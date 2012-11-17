@@ -1,0 +1,43 @@
+<?PHP
+
+// build menuing system
+
+function buildMenu($id = 0,$parent = ''){
+	$db = Zend_Registry::get('db');
+	$select = $db->select()
+				->from('pages')
+				->where('parent_id = ?',$id)
+				->where('menu = ?',0)
+				->order('pgsort DESC')
+				->order('title ASC');
+	$results = $db->fetchAll($select);
+
+	foreach($results as $id => $item){
+				if($item[filelnk] != ''){
+					$lnkFnl = $item[filelnk];
+				} else {
+					if($item[link_name] == '' || $item[link_name] == NULL){
+						$lnkFnl = '/content/?id='.$item[id].'/';
+					} else {
+						$lnkFnl = '/content/'.$item[link_name].'/';
+					}
+				}
+		if($item[filelnk] != ''){
+			// do nothing
+		} else {
+			$lnkFnl = 'http://www.ynotpizza.com'.$lnkFnl;
+			echo '<url>
+				  <loc>'.$lnkFnl.'</loc>
+				  <lastmod>'.date('Y-m-d',strtotime($item[modified])).'</lastmod>
+				  <changefreq>weekly</changefreq>
+				  <priority>0.8</priority>
+				</url>'."\n";
+		}
+
+		buildMenu($item[id],$newLnk);
+	}
+}
+// buildout menu
+buildMenu();
+?>
+

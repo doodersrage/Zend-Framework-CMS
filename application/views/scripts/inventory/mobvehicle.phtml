@@ -1,0 +1,54 @@
+  <div id="inventoryMid">
+    <div class="headerText"><h1><?PHP echo $this->inventory->year . ' ' . $this->inventory->make . ' ' . $this->inventory->model; ?><br />
+      <?PHP echo $this->inventory->style; ?></h1></div>
+          <div id="invImgBox">
+            <?PHP
+		  if($this->inventory->images){
+			  $images = explode(';',$this->inventory->images);
+			  foreach($images as $image){
+				  echo $this->image($image,'/application/upload/invent/images/'.$image,array(),'54x89');
+			  }
+			  $imgCnt = count($images)-1;
+			  $imgRand = rand(0,$imgCnt);
+			  $largeImage = $this->image($images[$imgRand],'/application/upload/invent/images/'.$images[$imgRand],array(),'320x240');
+		  }
+		  ?>
+          </div>
+        <?PHP if(isset($largeImage)) echo $largeImage; ?>
+        </div>
+  <div id="inventoryRight">
+    <div id="validate" style="display:none">
+      <h4>There are serious errors in your form submission, please see below for details.</h4>
+      <ol>
+        <li>
+          <label for="shareName" class="error">Please enter your name</label>
+        </li>
+        <li>
+          <label for="shareEmail" class="error">Please enter your email address</label>
+        </li>
+        <li>
+          <label for="sharePhone" class="error">Please enter your phone <b>number</b></label>
+        </li>
+        <li>
+          <label for="shareComment" class="error">Please enter your comment</label>
+        </li>
+      </ol>
+    </div>
+      <div class="headerText"><h1>Learn more about this vehicle!</h1></div>
+    <form method="post" name="shareInv" id="shareInv" action="/form-proc/vehicle/">
+      <label>Name</label>
+      <input type="text" name="shareName" id="shareName" class="required" />
+      <label>Phone</label>
+      <input type="text" name="sharePhone" id="sharePhone" class="required" />
+      <label>Email</label>
+      <input type="text" name="shareEmail" id="shareEmail" class="required" />
+      <div style="margin:0 auto"><input type="checkbox" value="1" name="shareContact" id="shareContact" /></div>
+      <div id="rightShareContact">Please contact me about this vehicle.</div>
+      <label>Comment:</label>
+      <textarea rows="3" name="shareComment" id="shareComment" class="required"></textarea>
+      <input type="hidden" name="vehicle" id="vehicle" value="<?PHP echo 'Year: '.trim($this->inventory->year) . ' Make: ' . trim($this->inventory->make) . ' Model: ' . trim($this->inventory->model) . ' Style: ' . trim($this->inventory->style) . ' StockNum: ' . trim($this->inventory->stockNum); ?>" />
+      <div id="invShareBut">
+        <input type="submit" name="submit" value="submit" />
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,199 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="E91 Bulletin for November 23, 2011" />
+    <title>E91 Bulletin for November 23, 2011</title>
+    <style type='text/css'>		
+		#featuredevents table:nth-child(even) { background-color:#FFF6DE; }
+
+		.summary a, .sidebar a {
+			color: #D76F00;
+		}
+		
+		.summary p, .sidebar p {
+			margin-top: 0;
+		}
+    </style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.summary a, .sidebar a').css('color','#D76F00');
+});
+</script>
+	<base href="http://www.east91st.org/" />
+</head>
+
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#A2997F" style="margin: 0; -webkit-text-size-adjust: none; background-color: #A2997F; padding: 0; width: 100% !important;" offset="0" leftmargin="0">
+    <center>
+        <table cellspacing="0" border="0" height="100%" bgcolor="#A2997F" style="margin: 0; background-color: #A2997F; padding: 0; height: 100% !important; width: 100% !important;" width="100%" cellpadding="0">
+            <tr>
+                <td align="center" valign="top" style="border-collapse: collapse;">
+                    <table cellspacing="0" border="0" width="720" cellpadding="0">
+                        <tr>
+                            <td align="center" valign="top" style="border-collapse: collapse;">
+                                <table cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color: #FFFFFF; border-bottom-width: 0;" width="600" cellpadding="0">
+                                    <tr>
+                                        <td align="center" valign="middle" style="font-weight: bold; font-size: 34px; border-collapse: collapse; padding: 0;  line-height:100%; font-family: Helvetica, Arial; color: #534635; vertical-align: middle; text-align: center;">
+                                        
+										<table id="header" width="720" height="150" border="0" cellpadding="0" cellspacing="0">
+											<tr>
+												<td colspan="2" style="line-height:0">
+													<img src="http://www.east91st.org/enews/images/E91_typeface.gif" width="424" height="85" alt="E91 Bulletin"></td>
+												<td colspan="2" rowspan="2" style="line-height:0">
+													<img src="http://www.east91st.org/enews/images/E91_logo.gif" width="296" height="111" alt="E91"></td>
+											</tr>
+											<tr>
+												<td width="424" height="26" colspan="2" valign="top"><p style="text-align:right; color:#554633; font-family:Helvetica, Arial; font-size:20px; line-height:14px; font-weight:normal; margin:0">November 23, 2011</p></td>
+											</tr>
+											<tr>
+												<td style="line-height:0">
+													<img src="http://www.east91st.org/enews/images/E91_title.gif" width="280" height="39" alt="East 91st Street Christian Church"></td>
+												<td style="line-height:0">
+													<a href="http://www.east91st.org" style="color: #534635; font-weight: normal; text-decoration: none;"><img src="http://www.east91st.org/enews/images/E91_website.gif" width="144" height="39" alt="www.east91st.org" border="0"></a></td>
+												<td style="line-height:0">
+													<a href="http://www.east91st.org" style="color: #534635; font-weight: normal; text-decoration: none;"><img src="http://www.east91st.org/enews/images/E91_website2.gif" width="39" height="39" alt="www.east91st.org" border="0"></a></td>
+												<td style="line-height:0">
+													<img src="http://www.east91st.org/enews/images/E91_tagline.gif" width="257" height="39" alt="Loving God, Loving People"></td>
+											</tr>
+										</table>
+										</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" valign="top" style="border-collapse: collapse;">
+                                <table cellspacing="0" border="0" width="720" cellpadding="0">
+                                    <tr>
+                                        <td valign="top" bgcolor="#FFFFFF" style="padding-bottom:18px; border-right:solid 1px #CBC5B6; background-color: #FFFFFF;" width="200">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="border-collapse: collapse; padding-top: 18px;">
+<img src="http://www.east91st.org/mediafiles/sermon-art.jpg" alt="sermon art" height="150" style="max-width: 200px;  line-height:1em; outline: none; border: 0; text-decoration: none; display: inline; height: auto; border-top:solid 1px #CBC5B6; border-bottom:solid 1px #CBC5B6" width="200" />
+                                                        <div align="left" style="font-family: Helvetica, Arial; padding: 18px; color: #534635; text-align: left; font-size:12px; line-height:1.3em">
+                                                            <h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 16px;  line-height:1em; font-family: Helvetica, Arial; color: #9CA043; display: block; text-align: left;">This Week's Message</h4>
+
+<p>Some great text here that highlights the current sermon series and Erferumque miliqua spienihil iurit im aceatur? Um et explabo. Por maximol uptation estions equam, etur, seditis dellestet reptur?</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="border-collapse: collapse;">
+                                                        <img src="http://www.east91st.org/mediafiles/get-connected.jpg" alt="Get Connected" width="200" style="max-width: 200px; line-height:1em; outline: none; border: 0; text-decoration: none; display: inline; height: auto;" /><div align="left" style="font-size: 12px; font-family: Helvetica, Arial; color: #534635; text-align: left;"><div style="padding: 18px;">
+<table style="width: 100%;" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="http://www.east91st.org/article/fall-2011-lifebook/"><img src="http://www.east91st.org/monkimage.php?mediaDirectory=mediafiles&amp;mediaId=1204873&amp;fileName=lifebook-th-0-0-41-55.jpg" width="41" height="55" alt="LifeBook (th)" title="LifeBook (th)" style="border: 0px initial initial;"></a><br></td>
+<td><strong><a href="http://www.east91st.org/article/fall-2011-lifebook/" style="color: #534635; font-size: 12px; text-decoration: none;">LifeBook</a></strong></td>
+</tr><tr><td colspan="2">
+<div style="border-bottom: solid 1px #CBC5B6; line-height: 1px;">&nbsp;</div>
+</td>
+</tr><tr><td><a href="http://www.east91st.org/event/2012-01-29-life-at-e91/"><img src="http://www.east91st.org/mediafiles/life-at-e91-th.jpg" alt="Life at E91 (th)" title="Life at E91 (th)" style="border: 0px initial initial;"></a><br></td>
+<td><strong style="color: #534635; font-size: 12px;"><a href="http://www.east91st.org/event/2012-01-29-life-at-e91/" style="color: #534635; font-size: 12px; text-decoration: none;">Life at E91</a></strong></td>
+</tr><tr><td colspan="2">
+<div style="border-bottom: solid 1px #CBC5B6; line-height: 1px;">&nbsp;</div>
+</td>
+</tr><tr><td><a href="http://www.east91st.org/connect/spiritual-dna-workshops/"><img src="http://www.east91st.org/monkimage.php?mediaDirectory=mediafiles&amp;mediaId=1204869&amp;fileName=spiritual-dna-th-0-0-49-55.jpg" width="49" height="55" alt="Spiritual DNA (th)" title="Spiritual DNA (th)" style="border: 0px initial initial;"></a><br></td>
+<td><strong style="color: #534635; font-size: 12px;"><a href="http://www.east91st.org/connect/spiritual-dna-workshops/" style="color: #534635; font-size: 12px; text-decoration: none;">Spiritual DNA</a></strong></td>
+</tr><tr><td colspan="2">
+<div style="border-bottom: solid 1px #CBC5B6; line-height: 1px;">&nbsp;</div>
+</td>
+</tr><tr><td><a href="http://www.east91st.org/connect/lifegroup-locator/"><img src="http://www.east91st.org/mediafiles/lifegroups-th.jpg" alt="LifeGroups (th)" title="LifeGroups (th)" style="border: 0px initial initial;"></a><br></td>
+<td><strong style="color: #534635; font-size: 12px;"><a href="http://www.east91st.org/connect/lifegroup-locator/" style="color: #534635; font-size: 12px; text-decoration: none;">LifeGroups</a></strong></td>
+</tr></tbody></table></div></div>                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="border-collapse: collapse;">
+														<img src="http://www.east91st.org/mediafiles/christmas-services.jpg" alt="Christmas Services" width="200" style="max-width: 200px; line-height:1em; outline: none; border: 0; text-decoration: none; display: inline; height: auto;" /><div align="left" style="font-size: 12px; font-family: Helvetica, Arial; color: #534635; text-align: left;"><div style="padding: 6px 18px;">
+<h2>Christmas Eve</h2>
+<p><strong>&bull; Saturday, Dec. 24, Sanct.</strong></p>
+<p><strong>&bull;&nbsp;Contemporary &ndash; 3 &amp; 5 p.m.</strong></p>
+<p><strong>&bull;&nbsp;Traditional &ndash; 7 &amp; 9 p.m.</strong></p>
+<h2><strong>Christmas Day</strong></h2>
+<p><strong>&bull;&nbsp;Sunday, Dec. 25</strong><br /><br /><strong>&bull;&nbsp;10:15 a.m., Sanctuary</strong></p>
+<p>Join us as we worship and focus on our Savior Jesus Christ. No children's programming will be offered so families can worship together.&nbsp;</p>
+</div></div>                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="border-collapse: collapse;">
+                                                        <img src="http://www.east91st.org/mediafiles/glimpses-of-growth.jpg" alt="Glimpses of Growth" width="200" style="max-width: 200px; line-height:1em; outline: none; border: 0; text-decoration: none; display: inline; height: auto;" /><div align="left" style="font-size: 12px; font-family: Helvetica, Arial; color: #534635; text-align: left;"><table width="100%" cellpadding="10" border="0" style="border-collapse: collapse;">
+<tbody>
+<tr>
+<td valign="top" style="color: #534635; font-size: 11px; border-right: solid 1px #CBC5B6;">Attendance for Nov. 13</td>
+<td valign="top" style="color: #534635; font-size: 11px; text-align: right;">3,845</td>
+</tr>
+<tr>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Weekly actual giving for Nov. 6</td>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; color: #534635; font-size: 11px; text-align: right;">$123,150</td>
+</tr>
+<tr>
+<td valign="top" style="border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Fiscal year* to date giving goal</td>
+<td valign="top" style="color: #534635; font-size: 11px; text-align: right;">$1,155,466</td>
+</tr>
+<tr>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Fiscal year* to date actual giving</td>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; color: #534635; font-size: 11px; text-align: right;">$1,135,189</td>
+</tr>
+<tr>
+<td valign="top" style="border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Fiscal year* to date actual general fund expenses</td>
+<td valign="top" style="color: #534635; font-size: 11px; text-align: right;">$1,046,153</td>
+</tr>
+<tr>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Beyond Us funds received</td>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; color: #534635; font-size: 11px; text-align: right;">$9,273,513</td>
+</tr>
+<tr>
+<td valign="top" style="border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">31 &amp; Done funds received</td>
+<td valign="top" style="color: #534635; font-size: 11px; text-align: right;">$1,678,933</td>
+</tr>
+<tr>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; border-right: solid 1px #CBC5B6; color: #534635; font-size: 11px;">Project to date building expansion expenses</td>
+<td bgcolor="#E6E6C8" valign="top" style="background-color: #e6e6c8; color: #534635; font-size: 11px; text-align: right;">$11,394,899</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 9px; font-family: Helvetica, Arial; color: #534635; text-align: center;">*Fiscal year runs through August 2012</p></div>                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+
+                                        </td>
+
+                                        <td valign="top" bgcolor="#FFFFFF" style="padding-bottom:18px; border-right:solid 1px #CBC5B6; background-color: #FFFFFF;" width="310">
+                                            <table border="0" cellpadding="18" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td valign="top" style="border-collapse: collapse;">
+                                                    <div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/event/2011-11-21-christian-holyland-foundation" style="color: #B16614;text-decoration:none; ">Christian Holyland Foundation</a></h4><p class="eventtime" style="font-family:Helvetica, Arial; margin:0 0 5px"><strong><span class="multidayevent">Monday, Nov. 21, 6:30 p.m.  </span><span title="Monday, Nov. 21, 6:30 p.m.  " style="display:none">Monday, November 21, 2011<span class='event-sep'>, </span><span class="eventTime"> 6:30 PM -  9:00 PM</span></span></strong></p><div class="summary" style="margin:0"><p>You and your guests are invited to join us&nbsp;for a reception for Hanna and Lina Eid,&nbsp;Israeli team members of the Christian&nbsp;Holyland Foundation. Help us welcome&nbsp;them, taste some Israeli food, and learn&nbsp;more about their ministry in Israel.&nbsp;<br /><strong>Community Room (111)</strong></p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/event/2011-11-27-reception-for-pastor-betty-aldridge" style="color: #B16614;text-decoration:none; ">Reception for Pastor Betty Aldridge</a></h4><p class="eventtime" style="font-family:Helvetica, Arial; margin:0 0 5px"><strong><span class="multidayevent">Sunday, Nov. 27, 11:30 a.m.</span><span title="Sunday, Nov. 27, 11:30 a.m." style="display:none">Sunday, November 27, 2011<span class='event-sep'>, </span><span class="eventTime">11:30 AM - 12:30 PM</span></span></strong></p><div class="summary" style="margin:0"><p>On Sunday, November 27, we will host a reception to thank Pastor Betty Aldridge for almost 20 years of ministry at E91! Everyone is invited to stop by after the 10:15 service that day.&nbsp;<br /><strong>Community Room (111)</strong></p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/event/2012-03-16-kathy-troccoli-among-friends-womens-conference" style="color: #B16614;text-decoration:none; ">Kathy Troccoli Among Friends Women's Conference</a></h4><p class="eventtime" style="font-family:Helvetica, Arial; margin:0 0 5px"><strong><span class="multidayevent">Friday, March 16-Saturday, March 17, 2012</span><span title="Friday, March 16-Saturday, March 17, 2012" style="display:none">Friday, March 16, 2012 - Saturday, March 17, 2012</span></strong></p><div class="summary" style="margin:0"><p>This conference is a gathering that gives women a break from the demands of their lives and allows them to refocus on the One who strengthens them for their journeys. Through songs, stories and Scripture, Kathy Troccoli and her special guests will share their life journeys, to encourage you on yours. Ticket information to be announced.</p></div></div>                                                    <div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/article/childcare-workers-needed" style="color: #B16614;text-decoration:none; ">Childcare Workers Needed</a></h4><div class="summary" style="margin:0"><p>E91 MOPS (Mothers of Preschoolers)&nbsp;is seeking childcare workers to care for&nbsp;children ages 0-6. Help is needed on the&nbsp;1st and 3rd Fridays of each month from&nbsp;8:30-11:45 a.m. These positions are&nbsp;paid! Call Ellen Snow at 213-1755.</p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/article/pursuit-team-update" style="color: #B16614;text-decoration:none; ">Pursuit Team Update</a></h4><div class="summary" style="margin:0"><p>The Pursuit Team has developed (and continues to compile) a list of potential Senior Pastor candidates, and has finalized a candidate evaluation process. Candidate evaluations have commenced, and initial contacts and interviews will begin shortly. See the <a href="http://www.east91st.org/senior-pastor-pursuit">Senior Pastor Pursuit</a> page for more information.</p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/article/married-for-keeps-abf-mastering-forgiveness" style="color: #B16614;text-decoration:none; ">Married for Keeps ABF: Mastering Forgiveness</a></h4><div class="summary" style="margin:0"><p>Join <a href="http://www.east91st.org/connect/adult-bible-fellowships/">Married for Keeps</a> for a 6-week study on understanding and mastering the complex facets of Forgiveness in your relationships.&nbsp;For information contact Kristen Orander at marriedforkeeps@ gmail.com or 577-8228.&nbsp;<strong>Sundays, 8:45 a.m., Sunroom (212)</strong></p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/article/building-closed" style="color: #B16614;text-decoration:none; ">Building Closed</a></h4><div class="summary" style="margin:0"><p>Please note that our church building&nbsp;will be closed from 6:00 p.m.&nbsp;on Wednesday, November 23 through&nbsp;Friday, November 25 for the Thanksgiving&nbsp;holiday.</p></div></div><div align="left" style="color: #505050; font-family: Georgia; font-size: 12px; text-align: left; margin-bottom:2em; line-height:1.3em"><h4 align="left" style="margin: 0 0 5px; font-weight: bold; font-size: 18px;  line-height:1em; font-family: Georgia; font-weight:normal; color: #B16614; display: block; text-align: left;"><a href="http://www.east91st.org/article/12-baskets-food-pantry" style="color: #B16614;text-decoration:none; ">12 Baskets Food Pantry </a></h4><div class="summary" style="margin:0"><p>E91&rsquo;s food ministry serves the church&nbsp;body and the community by providing&nbsp;to those unable to provide for themselves.&nbsp;We are currently in need of donations.&nbsp;Drop off donations in the grocery&nbsp;carts located in <strong>The Connecting Place.</strong></p></div></div>                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td valign="top" bgcolor="#FFFFFF" style="padding-bottom:18px; border-collapse: collapse; background-color: #FFFFFF;" width="210">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#E0E3C6" style="background-color:#E0E3C6">
+                                                <tr>
+                                                    <td valign="top" id="featuredevents" style="border-collapse: collapse;">
+
+                                                    <table border="0" cellpadding="18" cellspacing="0" width="100%"  style="border-bottom: solid 1px #CBC5B6"><tr><td valign="top" style="border-collapse: collapse;"><a href="http://www.east91st.org/event/2011-11-20-world-hunger-offering"><img src="http://www.east91st.org/mediafiles/world-hunger-side.jpg" alt="World Hunger Offering" style="max-width: 174px; margin-bottom:15px; line-height:1em; outline: none; border: solid 1px #CBC5B6; text-decoration: none; display: block; height: auto;" width="174" /></a><div align="center" style="font-size: 12px; font-family: Helvetica, Arial; color: #505050; text-align: center; line-height:1.3em"><h4 style="color: #505050; font-family: Helvetica, Arial; font-size: 16px; font-weight: bold; line-height:1em; margin:0 0 5px"><a href="http://www.east91st.org/event/2011-11-20-world-hunger-offering" style="text-decoration:none; color: #505050;">World Hunger Offering</a></h4><p class="eventtime" style="color: #505050; font-family: Helvetica, Arial; font-size: 13px;  line-height:1.3em; margin:0 0 5px"><strong><span class="multidayevent">From Nov. 20 to Dec. 31</span><span title="From Nov. 20 to Dec. 31" style="display:none">Daily from 11/20/2011 to 12/31/2011</span></strong></p><div class="summary" style="color: #B16614; font-family: Helvetica, Arial; font-size: 12px;  line-height:1.3em;"><p>E91 takes this annual offering to share&nbsp;our blessings with those who have&nbsp;nothing. Special envelopes will be&nbsp;provided next Sunday, Nov. 20.&nbsp;<a href="http://www.east91st.org/event/2011-11-20-world-hunger-offering/">Learn more&hellip;</a></p></div></div></td></tr></table><table border="0" cellpadding="18" cellspacing="0" width="100%"  style="border-bottom: solid 1px #CBC5B6"><tr><td valign="top" style="border-collapse: collapse;"><a href="http://www.east91st.org/event/2011-11-20-military-packages"><img src="http://www.east91st.org/mediafiles/military-packages.jpg" alt="Military Packages" style="max-width: 174px; margin-bottom:15px; line-height:1em; outline: none; border: solid 1px #CBC5B6; text-decoration: none; display: block; height: auto;" width="174" /></a><div align="center" style="font-size: 12px; font-family: Helvetica, Arial; color: #505050; text-align: center; line-height:1.3em"><h4 style="color: #505050; font-family: Helvetica, Arial; font-size: 16px; font-weight: bold; line-height:1em; margin:0 0 5px"><a href="http://www.east91st.org/event/2011-11-20-military-packages" style="text-decoration:none; color: #505050;">Military Packages</a></h4><p class="eventtime" style="color: #505050; font-family: Helvetica, Arial; font-size: 13px;  line-height:1.3em; margin:0 0 5px"><strong><span class="multidayevent">Visit table in the Narthex</span><span title="Visit table in the Narthex" style="display:none">Sunday, November 20, 2011</span></strong></p><div class="summary" style="color: #B16614; font-family: Helvetica, Arial; font-size: 12px;  line-height:1.3em;"><p>Visit the&nbsp;<a href="http://www.east91st.org/counseling-and-care/support-groups/">Military Family Support Group</a>&nbsp;table to participate in sending packages to&nbsp;men and women serving our country. We&rsquo;ll&nbsp;supply the box and list of needs.</p></div></div></td></tr></table><table border="0" cellpadding="18" cellspacing="0" width="100%"  style="border-bottom: solid 1px #CBC5B6"><tr><td valign="top" style="border-collapse: collapse;"><a href="http://www.east91st.org/event/2011-11-20-christmas-invite-card"><img src="http://www.east91st.org/mediafiles/christmas-card.jpg" alt="Christmas Invite Card" style="max-width: 174px; margin-bottom:15px; line-height:1em; outline: none; border: solid 1px #CBC5B6; text-decoration: none; display: block; height: auto;" width="174" /></a><div align="center" style="font-size: 12px; font-family: Helvetica, Arial; color: #505050; text-align: center; line-height:1.3em"><h4 style="color: #505050; font-family: Helvetica, Arial; font-size: 16px; font-weight: bold; line-height:1em; margin:0 0 5px"><a href="http://www.east91st.org/event/2011-11-20-christmas-invite-card" style="text-decoration:none; color: #505050;">Christmas Invite Card</a></h4><p class="eventtime" style="color: #505050; font-family: Helvetica, Arial; font-size: 13px;  line-height:1.3em; margin:0 0 5px"><strong><span class="multidayevent">Pick up at Info Center</span><span title="Pick up at Info Center" style="display:none">Sunday, November 20, 2011</span></strong></p><div class="summary" style="color: #B16614; font-family: Helvetica, Arial; font-size: 12px;  line-height:1.3em;"><p>Connect with people in your neighborhood&nbsp;or invite friends and family to our Christmas&nbsp;services listed on invite cards that are available&nbsp;at the Information Center.</p></div></div></td></tr></table><table border="0" cellpadding="18" cellspacing="0" width="100%"  style="border-bottom: solid 1px #CBC5B6"><tr><td valign="top" style="border-collapse: collapse;"><a href="http://www.east91st.org/event/2011-12-03-breakfast-in-bethlehem"><img src="http://www.east91st.org/mediafiles/breakfast-in-bethlehem-side.jpg" alt="Breakfast in Bethlehem" style="max-width: 174px; margin-bottom:15px; line-height:1em; outline: none; border: solid 1px #CBC5B6; text-decoration: none; display: block; height: auto;" width="174" /></a><div align="center" style="font-size: 12px; font-family: Helvetica, Arial; color: #505050; text-align: center; line-height:1.3em"><h4 style="color: #505050; font-family: Helvetica, Arial; font-size: 16px; font-weight: bold; line-height:1em; margin:0 0 5px"><a href="http://www.east91st.org/event/2011-12-03-breakfast-in-bethlehem" style="text-decoration:none; color: #505050;">Breakfast in Bethlehem</a></h4><p class="eventtime" style="color: #505050; font-family: Helvetica, Arial; font-size: 13px;  line-height:1.3em; margin:0 0 5px"><strong><span class="multidayevent">Saturday, Dec. 3, 9:00 a.m.</span><span title="Saturday, Dec. 3, 9:00 a.m." style="display:none">Saturday, December 03, 2011<span class='event-sep'>, </span><span class="eventTime"> 9:00 AM - 10:15 AM</span></span></strong></p><div class="summary" style="color: #B16614; font-family: Helvetica, Arial; font-size: 12px;  line-height:1.3em;"><p>Preschoolers and early elementary age kids will enjoy hands-on participation in this drama of events surrounding the birth of Jesus. Families are treated to a pancake breakfast while meeting Bible characters straight from the Nativity story. Kids can even have their picture taken with their favorite Bible character. <strong>Choose 9:00 or 10:30 a.m.</strong></p>
+<p><a href="http://www.east91st.org/bib/">Register now!</a>&nbsp;</p></div></div></td></tr></table><table border="0" cellpadding="18" cellspacing="0" width="100%"  style="border-bottom: solid 1px #CBC5B6"><tr><td valign="top" style="border-collapse: collapse;"><a href="http://www.east91st.org/event/2011-12-17-gifts-of-grace"><img src="http://www.east91st.org/mediafiles/gifts-of-grace-side.jpg" alt="Gifts of Grace" style="max-width: 174px; margin-bottom:15px; line-height:1em; outline: none; border: solid 1px #CBC5B6; text-decoration: none; display: block; height: auto;" width="174" /></a><div align="center" style="font-size: 12px; font-family: Helvetica, Arial; color: #505050; text-align: center; line-height:1.3em"><h4 style="color: #505050; font-family: Helvetica, Arial; font-size: 16px; font-weight: bold; line-height:1em; margin:0 0 5px"><a href="http://www.east91st.org/event/2011-12-17-gifts-of-grace" style="text-decoration:none; color: #505050;">Gifts of Grace</a></h4><p class="eventtime" style="color: #505050; font-family: Helvetica, Arial; font-size: 13px;  line-height:1.3em; margin:0 0 5px"><strong><span class="multidayevent">Saturday, Dec. 17, 10 a.m. - 4 p.m.</span><span title="Saturday, Dec. 17, 10 a.m. - 4 p.m." style="display:none">Saturday, December 17, 2011<span class='event-sep'>, </span><span class="eventTime">10:00 AM -  4:00 PM</span></span></strong></p><div class="summary" style="color: #B16614; font-family: Helvetica, Arial; font-size: 12px;  line-height:1.3em;"><p>Community families in need are treated to food, fun, activities for the kids, and a free shopping trip to our Christmas Store. Join us for a special opportunity to touch the lives of these families.&nbsp;</p>
+<p>Visit the&nbsp;<a href="http://www.east91st.org/giftsofgrace/">Gifts of Grace page</a>.</p></div></div></td></tr></table>
+</td></tr></table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

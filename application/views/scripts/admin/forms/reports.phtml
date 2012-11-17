@@ -1,0 +1,35 @@
+<div id="adminLeftClm">
+  <form name="reportsForm" id="reportsForm" method="post">
+    <label for="types">Types:</label>
+    <select name="types" id="types">
+      <?PHP
+foreach($this->types as $type){
+	echo '<option'.($type == $_POST['types'] ? ' selected="selected" ' : '').'>'.$type[type].'</option>';
+}
+?>
+    </select>
+    <label for="fields">Fields:</label>
+    <select name="fields" id="fields">
+      <option></option>
+      <?PHP
+
+//print_r($this->fields);
+foreach($this->fields as $id => $field){
+	switch($id){
+		case 'x':
+		case 'y':
+		break;
+		default:
+			echo '<option'.($id == $_POST['fields'] ? ' selected="selected" ' : '').'>'.$id.'</option>';
+		break;
+	}
+}
+?>
+    </select>
+    <input type="submit" name="submit" value="submit" />
+    <label>Select a field to generate a report.</label>
+  </form>
+  <?PHP echo $this->results; ?>
+  <p><?PHP echo $this->chart; ?></p>
+</div>
+<div id="adminRightClm"> <a href="/admin_forms/">Results</a> <a href="/admin_forms/reports/">Reports</a> <a href="<?PHP echo $this->download; ?>" target="_blank">Download Selected Type</a> </div>

@@ -1,0 +1,11 @@
+<div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/press-releases/">Press Releases</a> &raquo; <?PHP echo $this->bc; ?></div>
+<p><img width="754" height="21" alt="" src="/upload/pages/image/nav30_news_releases.png" /></p>
+<div id="pressPage">
+  <h1><?PHP echo $this->title; ?></h1>
+  <p><strong><?PHP echo date("n/j/Y",strtotime($this->date)); ?></strong></p>
+  <?PHP 
+
+echo $this->copy_text; 
+
+?>
+</div>

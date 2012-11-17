@@ -1,0 +1,72 @@
+<?PHP
+$routes = new Application_Model_Routes;
+$routesMapper = new Application_Model_RoutesMapper;
+?>
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/news/">NEWS</a> &raquo; <?PHP echo $this->bc; ?></div>
+    <div id="copyBlock">
+      <h1><?PHP echo $this->title; ?></h1>
+      <?PHP 
+	  echo $this->copy_text; 
+	  ?>
+      <?php if(count($this->paginator) > 0): ?>
+      <table class="newsListing">
+        <?PHP $rowCnt = 0; ?>
+        <?php foreach($this->paginator AS $key => $row): ?>
+        <?PHP
+		// generate new item link
+		if($row[route_id]){
+			$routesMapper->find($row[route_id],$routes);
+			if($routes->getUri()){
+				$lnkFnl = '/'.$routes->getUri().'/';
+			} else {
+				$lnkFnl = '/news/item/'. $this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])),'--','-').'/'.$row[id].'/';
+			}
+		} else {
+			$lnkFnl = '/news/item/'. $this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])),'--','-').'/'.$row[id].'/';
+		}
+
+		?>
+        <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+          <td><h2>
+              <?=$row[name]?>
+            </h2>
+            <p>
+              <?=date("l, F j, Y",$row[date_added])?>
+            </p>
+            <p>
+              <?PHP echo (!empty($row[image]) ? '<a title="'.$row[name].'" class="enlarge" href="/upload/news/'.$row[image].'"><img alt="'.$row[name].'" style="float:left" src="/image/?image=/upload/news/'.urlencode($row[image]).'&width=470&height=300" /></a>' : ''); ?><?=str_replace(array('<p>','</p>'),array('',''),substr(strip_tags($row[description]),0,200)).'...'?>
+            </p>
+            <?PHP
+			if($row[remote_link]){
+				$link = '<a href="'.$row[remote_link].'" target="_blank">';
+			} else {
+				$link = '<a href="'.$lnkFnl.'">';
+			}
+			?>
+            <div class="clear"></div>
+            <p><?PHP echo $link; ?> Read More... </a></p></td>
+        </tr>
+        <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+        <?php endforeach; ?>
+        <tr>
+          <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+        </tr>
+      </table>
+      <?php else: ?>
+      <?PHP throw new Exception("Page not found!"); ?>
+      <?php endif; ?>
+    </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

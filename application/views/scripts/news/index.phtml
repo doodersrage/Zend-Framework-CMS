@@ -1,0 +1,40 @@
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+<div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+  <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/news/">News</a></div>
+  <div id="copyBlock">
+    <?php if(count($this->paginator) > 0): ?>
+    <table class="newsListing">
+      <tr>
+        <th>Name</th>
+      </tr>
+      <?PHP $rowCnt = 0; ?>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+        <td><a href="/news/category/<?PHP echo $this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])),'--','-').'/'.$row[id]; ?>/">
+          <?=$row[name]?>
+          </a>
+          <?PHP $this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])),'--','-'); ?>
+          </td>
+      </tr>
+      <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+    </table>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+  </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,43 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php 
+
+// print header meta
+echo $this->headMeta()."\n";
+
+// print header title
+echo $this->headTitle()."\n"; 
+
+// link stylesheets
+//echo $this->minifyHeadLink()->appendStylesheet('/css/reset.css')."\n";
+//echo $this->headLink()->appendStylesheet('/css/erbar/MyFontsWebfontsOrderM2973350.css');
+
+// link js documents
+echo $this->headScript()."\n";
+//echo $this->minifyHeadScript()->appendFile('/js/jquery-ui-1.8.11.custom.min.js')
+//							  ->appendFile('/jwplayer/jwplayer.js')
+//							  ->appendFile('/js/jquery.mousewheel-3.0.4.pack.js')
+//							  ->appendFile('/js/jScrollPane.js')
+//							  ->appendFile('/js/hoverIntent.js')
+//							  ->appendFile('/js/jquery.imgpreload.min.js')
+//							  ->appendFile('/js/default.js'); 
+
+?>
+</head>
+
+<body>
+<div id="content"><?php echo $this->layout()->content; ?></div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?PHP echo Zend_Registry::get('Google Analytics Key'); ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/search/?searchVal=<?PHP echo $_GET['searchVal']; ?>">SEARCH</a></div>
+    <div id="copyBlock">
+      <div class="searchResults">
+        <?php if(count($this->pages) > 0): ?>
+        <h1>Pages</h1>
+        <div class="clear"></div>
+        <?php foreach($this->pages AS $key => $row): ?>
+        <div class="srchRslt">
+          <?PHP
+	echo '<a href="'.$row[pglink].'">'.$row[title].'</a>';
+	?>
+        </div>
+        <?php endforeach; ?>
+        <div class="clear"></div>
+        <?php else: ?>
+        No results.
+        <?php endif; ?>
+      </div>
+      <div class="searchResults">
+        <?php if(count($this->vehicles) > 0): ?>
+        <h1>Vehicles</h1>
+        <div class="clear"></div>
+        <?php foreach($this->vehicles AS $key => $row): ?>
+        <?PHP
+  $imagesArr = explode(';',$row[images]);
+  echo '<div class="invRes" onclick="location.href=\'/inventory/vehicle/stocknum/'.$row[stockNum].'\'">
+  		<div class="invResImg">'.(count($imagesArr) > 0 ? $this->image($imagesArr[0],'/application/upload/invent/images/'.$imagesArr[0],array(),'100x100') : '&nbsp;').'</div>
+  		<div class="invResInfo">'.$row[year].'</div>
+  		<div class="invResInfo">'.$row[make].'</div>
+  		<div class="invResInfo">'.$row[model].'</div>
+  		<div class="invResInfo">'.$row[style].'</div>
+  		<div class="invResInfo">'.$row[color].'</div>
+		</div>';
+  ?>
+        <?php endforeach; ?>
+        <div class="clear"></div>
+        <?php else: ?>
+        <?php endif; ?>
+      </div>
+      <div class="searchResults">
+        <?php if(count($this->news) > 0): ?>
+        <h1>News</h1>
+        <?php foreach($this->news AS $key => $row): ?>
+        <div class="srchRslt">
+			<?PHP
+            // grab dynamic route if assigned
+            $routes = new Application_Model_Routes;
+            $routesMapper = new Application_Model_RoutesMapper;
+            if($row[route_id]){
+                $routesMapper->find($row[route_id],$routes);
+                if($routes->getUri()){
+                    $lnkFnl = '/'.$routes->getUri().'/';
+                } else {
+                    $lnkFnl = '/news/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+                }
+            } else {
+                $lnkFnl = '/news/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+            }
+            ?>
+            <?PHP $pgLnk = $lnkFnl;
+		  echo '<a href="'.$pgLnk.'" title="'.$row[title].'">'.$row[name].'</a>'; ?>
+        </div>
+        <?php endforeach; ?>
+        <?php else: ?>
+        <?php endif; ?>
+      </div>
+      <div class="searchResults">
+        <?php if(count($this->events) > 0): ?>
+        <h1>Events</h1>
+        <?php foreach($this->events AS $key => $row): ?>
+        <div class="srchRslt">
+			<?PHP
+            // grab dynamic route if assigned
+            $routes = new Application_Model_Routes;
+            $routesMapper = new Application_Model_RoutesMapper;
+            if($row[route_id]){
+                $routesMapper->find($row[route_id],$routes);
+                if($routes->getUri()){
+                    $lnkFnl = '/'.$routes->getUri().'/';
+                } else {
+                    $lnkFnl = '/event/name/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+                }
+            } else {
+                $lnkFnl = '/event/name/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+            }
+            ?>
+            <?PHP $pgLnk = $lnkFnl;
+		  echo '<a href="'.$pgLnk.'" title="'.$row[title].'">'.$row[name].'</a>'; ?>
+        </div>
+        <?php endforeach; ?>
+        <?php else: ?>
+        <?php endif; ?>
+      </div>
+      <div class="searchResults">
+        <?php if(count($this->press_releases) > 0): ?>
+        <h1>Press Releases</h1>
+        <?php foreach($this->press_releases AS $key => $row): ?>
+        <div class="srchRslt">
+          <?PHP 
+		if($row[filelnk] != ''){
+			$pgLnk = str_replace(' ','+',$row[filelnk]);
+		} else {
+			$pgLnk = '/press-releases/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[title]))).'/'.$row[id].'/';
+		}
+	  echo '<a href="'.$pgLnk.'" title="'.$row[title].'">'.$row[title].'</a>'; ?>
+        </div>
+        <?php endforeach; ?>
+        <?php else: ?>
+        <?php endif; ?>
+      </div>
+      <div class="searchResults">
+        <?php if(count($this->partners) > 0): ?>
+        <h1>Partners</h1>
+        <?php foreach($this->partners AS $key => $row): ?>
+        <div class="srchRslt">
+          <?PHP 
+		if($row[link] != ''){
+			$pgLnk = str_replace(' ','+',$row[link]);
+		} else {
+			$pgLnk = '/partners/partner/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+		}
+	  echo '<a href="'.$pgLnk.'" title="'.$row[name].'">'.$row[name].'</a>'; ?>
+        </div>
+        <?php endforeach; ?>
+        <?php else: ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

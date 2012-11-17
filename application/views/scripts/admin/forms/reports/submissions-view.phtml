@@ -1,0 +1,17 @@
+<div id="adminLeftClm">
+  <table class="formOP">
+    <?PHP
+$formData = unserialize($this->formdata);
+foreach($formData as $id => $value){
+	if(is_array($value)){
+		foreach($value as $curId => $curValue){
+			echo '<tr><th><strong>'.$id.' '.$curId.':</strong> </th><td>'.$curValue.'</td></tr>';
+		}
+	} else {
+		echo '<tr><th><strong>'.$id.':</strong> </th><td>'.(strstr($value,'http:') ? '<a target="_blank" href="'.$value.'">'.$value.'</a>' : $value).'</td></tr>';
+	}
+}
+?>
+  </table>
+</div>
+<div id="adminRightClm"> <a href="/admin_forms_reports/"><img src="/images/buttons/listing.png" alt="button 1" /></a> </div>

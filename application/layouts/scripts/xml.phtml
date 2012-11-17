@@ -1,0 +1,16 @@
+<?PHP
+$myxhtml = new DOMDocument("1.0","UTF-8");
+$myxhtml->formatOutput = true;
+$xmlHtml = $myxhtml->createElement("html");
+$xmlHtml->setAttribute("xmlns","http://www.w3.org/1999/xhtml");
+$xmlHtml->setAttribute("xml:lang","en");
+// add head and body child elements and append stuff
+header("Content-Type: application/xhtml+xml; charset=utf-8");
+print $myxhtml->saveXML();
+?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?php echo $this->layout()->content; ?>
+</urlset>

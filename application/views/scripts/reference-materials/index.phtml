@@ -1,0 +1,29 @@
+<div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/reference-materials/">Reference Materials</a></div>
+<div id="partnerLst">
+  <?php if(count($this->paginator) > 0): ?>
+  <table class="partnerListing">
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+    </tr>
+    <?PHP $rowCnt = 0; ?>
+    <?php foreach($this->paginator AS $key => $row): ?>
+    <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+      <td><a href="/reference-materials/item/<?PHP echo strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id]; ?>/"><img src="/upload/reference/<?=$row[image]?>" alt="<?=$row[name]?>" /></a></td>
+      <td><a href="/reference-materials/item/<?PHP echo strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id]; ?>/">
+        <?=$row[name]?>
+        </a></td>
+    </tr>
+    <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+    <?php endforeach; ?>
+    <tr>
+      <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+    </tr>
+  </table>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>

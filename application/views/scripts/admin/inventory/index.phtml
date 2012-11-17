@@ -1,0 +1,78 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="inventory">
+    <table class="adminListing">
+      <tr>
+        <td align="right"><?PHP
+		  if(isset($_SESSION['filterOption'])){
+			  echo '<a href="/admin_inventory/?clearFilter=1">Clear Filter Options</a> ';
+		  }
+		  ?>
+          <strong>Filter By:</strong>
+          <select name="filterOption" id="filterOption">
+            <option>stock #</option>
+            <!--            <option>year</option>
+            <option>make</option>
+            <option>model</option>
+            <option>style</option>
+            <option>color</option>
+            <option>vin</option>-->
+            <option>name</option>
+            <option>price</option>
+            <option>description</option>
+          </select>
+          <input type="text" name="filterText"  id="filterText" />
+          <input name="apply2" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <form method="post" name="inventory">
+    <table class="adminListing">
+      <tr>
+        <th>Image</th>
+        <th>STOCK #</th>
+        <!--<th>YEAR</th>
+        <th>VEHICLE MAKE</th>
+        <th>VEHICLE MODEL</th>
+        <th>BODY STYLE</th>
+        <th>COLOR</th>
+        <th>VIN</th>-->
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr>
+        <td><a href="/upload/invent/images/<?=$row[images]?>" class="imgHlper"><img src="/image/?image=/upload/invent/images/<?=$row[images]?>&width=80&height=50" title="" /></a></td>
+        <td><?=$row[stockNum]?></td>
+        <!--<td><?=$row[year]?></td>
+        <td><?=$row[make]?></td>
+        <td><?=$row[model]?></td>
+        <td><?=$row[style]?></td>
+        <td><?=$row[color]?></td>
+        <td><?=$row[vin]?></td>-->
+        <td><?=$row[name]?></td>
+        <td><?=$row[price]?></td>
+        <td align="center"><a href="/admin_inventory/edit/?id=<?=$row[stockNum]?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td align="center"><input type="checkbox" name="delete[]" value="<?=$row[stockNum]?>" /></td>
+      </tr>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="9" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+      <tr>
+        <td colspan="9" align="right"><input name="apply" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?PHP
+  if(isset($_SESSION['filterOption'])){
+	  echo '<a href="/admin_inventory/?clearFilter=1">Clear Filter Options</a> ';
+  }
+  ?>
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"> <a href="/admin_inventory/edit/"><img src="/images/buttons/button1up.png" alt="button 1" /></a> <!--<a href="/admin_inventory/upload/"><img src="/images/buttons/button2up.png" alt="button 2" /></a>--> </div>

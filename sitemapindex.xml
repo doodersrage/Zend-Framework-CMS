@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>http://www.domain.com/content/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/press-releases/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/event/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/news/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/partners/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/reference-materials/xml/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>http://www.domain.com/blog/sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>

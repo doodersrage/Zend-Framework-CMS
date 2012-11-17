@@ -1,0 +1,17 @@
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/event/">EVENTS</a> &raquo; <?PHP echo $this->bc; ?></div>
+    <?PHP //echo $this->calendar; ?>
+    <div id="copyBlock">
+      <h1 id="eventTitle"><?PHP echo $this->title; ?></h1>
+      <p><strong>Start Date:</strong> <?PHP echo $this->start; ?></p>
+      <p><strong>End Date:</strong> <?PHP echo $this->finish; ?></p>
+      <div id="eventCopy">
+        <?PHP 
+
+echo $this->copy_text; 
+
+?>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>

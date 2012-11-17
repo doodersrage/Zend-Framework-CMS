@@ -1,0 +1,87 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php 
+
+// print header meta
+echo $this->headMeta();
+
+// print header title
+echo $this->headTitle(); 
+
+// link stylesheets
+echo $this->minifyHeadLink()->appendStylesheet('/css/reset.css')
+							->appendStylesheet('/css/default.css')
+							->appendStylesheet('/css/admin.css')
+							->appendStylesheet('/js/uploadify/uploadify.css')
+							->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.11.custom.css')
+							->appendStylesheet('/css/jScrollPane.css')
+							->appendStylesheet('/js/fancybox/jquery.fancybox-1.3.4.css')
+							->appendStylesheet('/css/superfish.css')."\n";
+echo $this->headLink();
+
+// link js documents
+echo $this->headScript()->appendFile('/application/ext/fckeditor/fckconfig.js')->appendFile('/js/admin.js')."\n";
+echo $this->minifyHeadScript()->appendFile('/js/uploadify/swfobject.js')
+						->appendFile('/js/jquery-ui-1.8.11.custom.min.js')
+						->appendFile('/js/jcarousellite_1.0.1.min.js')
+						->appendFile('/js/jquery.mousewheel-3.0.4.pack.js')
+						->appendFile('/js/jScrollPane.js')
+						->appendFile('/js/hoverIntent.js')
+						->appendFile('/js/superfish.js')
+						->appendFile('/js/fancybox/jquery.fancybox-1.3.4.pack.js')
+						->appendFile('/js/uploadify/jquery.uploadify.v2.1.4.min.js')
+						->appendFile('/jwplayer/jwplayer.js'); 
+
+?>
+</head>
+
+<body>
+<div id="container">
+  <div id="headBox"> <a href="/admin/"><img src="/images/layout/logo.png" alt="YNot Pizza & Italian Cuisine logo image" name="adminlogo" width="154" height="165" id="autoconnlogo" /></a>
+  <?PHP
+  $storage = new Zend_Auth_Storage_Session();
+        $data = $storage->read();
+        if(!empty($data)){ 
+		$usersGroups = new Application_Model_UsersGroups;
+		$usersGroupsMapper = new Application_Model_UsersGroupsMapper;
+		$usersGroupsMapper->find($data->group, $usersGroups);
+
+		$rest = unserialize($usersGroups->getRestrictions());
+		?>
+        <div id="headerNavFloat">
+        	<?PHP
+			if($rest[2] == 1){
+			?>
+			<a href="/admin_user_manager_index/" title="Users"><img src="/images/admin/user-icon-small.png" alt="users"></a>
+			<?PHP
+			}
+			if($rest[1] == 1){
+			?>
+			<a href="/admin_user_groups_index/" title="User Groups"><img src="/images/admin/user-groups-icon.png" alt="user groups"></a>
+			<?PHP
+			}
+			?>
+			<?PHP
+			if($rest[14] == 1){
+			?>
+            <a href="/admin_config/" title="Site Configuration"><img src="/images/admin/icon-gear-small.gif" alt="config"></a>
+			<?PHP
+			}
+			?>
+            <a href="/admin_redirects/" title="Redirects"><img src="/images/admin/redirect.png" alt="redirects"></a>
+            <a href="/admin_login/?logout=1" title="Sign Out"><img src="/images/admin/icon_redX.png" alt="sign out"></a>
+        </div>
+  <div id="headNavWrap">
+    <?PHP $this->adminMenu(); ?>
+    <div class="clear"></div><div id="menuTab">&darr;</div>
+  </div>
+        <?PHP
+		}
+  ?></div>
+  <div id="adminContFill">
+    <div id="adminContFillWrap"> <?php echo $this->layout()->content; ?> </div>
+  </div>
+</div>
+</body>
+</html>

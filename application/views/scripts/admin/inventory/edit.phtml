@@ -1,0 +1,25 @@
+<div id="adminLeftClm"> <?php echo $this->form ?>
+<?php 
+if($this->images != ''){
+	$imagesArr = explode(';',$this->images);
+	echo '<div id="inventImagePrvw">
+		<div id="imagePreviewTxt">
+		<strong>Assigned image preview.</strong>
+		</div>';
+	$count = 0;
+	foreach($imagesArr as $imageCur){
+		$count++;
+		echo '<div class="imgPrvw" id="'.str_replace(array(' ','.'),array('-',''),$imageCur).'">
+		<a class="imgHlper" rel="imgHlper" href="/upload/invent/images/'.$imageCur.'">
+                                        <img src="/image/?image=/upload/invent/images/'.$imageCur.'&width=100&height=68" title=""  id="lg_6ft_sub.png" /></a>
+		<div class="prevName">'.$imageCur.'</div>
+		<div class="prevName"><a href="javascript:void(0)" onclick="removeImage(\''.$imageCur.'\','.$count.')">Delete</a></div>
+		</div>';
+	}
+	echo '</div>';
+}
+?>
+</div>
+
+<div id="adminRightClm"> <a href="/admin_inventory/"><img src="/images/buttons/listing.png" alt="button 1" /></a> <a href="/admin_inventory/edit/"><img src="/images/buttons/button1up.png" alt="button 2" /></a> <!--<a href="/admin_inventory/upload/"><img src="/images/buttons/button2up.png" alt="button 3" /></a>--> </div>
+

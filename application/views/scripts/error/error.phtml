@@ -1,0 +1,51 @@
+<div style="margin:0 auto;width:100%;text-align:center;padding:20px 0 20px 0;">
+  <?PHP echo Zend_Registry::get('404 Page Copy'); ?>
+  <?PHP ob_start(); ?>
+  <h1>An error occurred</h1>
+  <h2><?php echo $this->message ?></h2>
+  <?PHP
+  function curPageURL() {
+	 $pageURL = 'http';
+	 if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+	 $pageURL .= "://";
+	 if ($_SERVER["SERVER_PORT"] != "80") {
+	  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+	 } else {
+	  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+	 }
+	 return $pageURL;
+  }
+  echo '<h2>Page: '.curPageURL().'</h2>';
+  ?>
+
+  <?php if (isset($this->exception)): ?>
+
+  <h3>Exception information:</h3>
+  <p>
+      <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+  </p>
+
+  <h3>Stack trace:</h3>
+  <pre><?php echo $this->exception->getTraceAsString() ?>
+  </pre>
+
+  <h3>Request Parameters:</h3>
+  <pre><?php echo var_export($this->request->getParams(), true) ?>
+  </pre>
+  <?php endif ?>
+  <?PHP
+	$buf1 = ob_get_contents();
+	ob_end_clean();
+	echo $buf1;
+	if(Zend_Registry::get('404 Page Send Email')){
+		// send email
+		$mail = new Zend_Mail();
+		$mail->setBodyHtml($buf1);
+		$mail->setFrom(Zend_Registry::get('Contact Email'), 'Recipient');
+		$mail->addTo(Zend_Registry::get('404 Page Send Email'), 'Recipient');
+		$mail->setSubject(Zend_Registry::get('Site Name').' Page Load Error');
+		//$mail->send();
+	}
+  ?>
+  
+</div>

@@ -1,0 +1,56 @@
+<?php if(count($this->paginator) > 0): ?>
+<table class="adminListing" style="float:right;">
+  <tr>
+    <th></th>
+    <th>Title</th>
+    <th>Modified</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <?PHP $rowCnt = 0; ?>
+  <?php foreach($this->paginator AS $key => $row): ?>
+  <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+    <td><?PHP
+			// build parent drop down
+			$db = Zend_Registry::get('db');
+			$select = $db->select()
+						->from('pages');
+			$select->where('parent_id = ?',$row[id]);
+			$results = $db->fetchAll($select);
+
+			if(count($results) > 0){
+				echo '<div class="plusSmbl" id="'.$row[id].'"></div>';
+			}
+
+        ?></td>
+    <td><?=$row[title]?></td>
+    <td><?=date("F j, Y, g:i a",strtotime($row[modified]))?></td>
+	<?PHP
+	if($row[route_id]){
+		$routes = new Application_Model_Routes;
+		$routesMapper = new Application_Model_RoutesMapper;
+		$routesMapper->find($row[route_id],$routes);
+		$lnkFnl = '/'.$routes->getUri().'/';
+	}elseif($row[link_name] == '' || $row[link_name] == NULL){
+        $lnkFnl = '/content/id/'.$row[id].'/';
+    } else {
+        $lnkFnl = '/content/'.$row[link_name].'/';
+    }
+    ?>
+    <td align="center"><a target="_blank" href="<?PHP echo $lnkFnl; ?>"><img src="/images/admin/mag.png" alt="preview" /></a></td>
+    <td align="center"><a href="/admin_pages/edit/id/<?=$row[id]?>/"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+    <td align="center"><input type="checkbox" name="delete[]" value="<?=$row[id]?>" /></td>
+  </tr>
+  <tr>
+    <td id="exp<?PHP echo $row[id]; ?>" colspan="6"></td>
+  </tr>
+  <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+  <?php endforeach; ?>
+</table>
+<?php else: ?>
+No results.
+<?php endif; ?>

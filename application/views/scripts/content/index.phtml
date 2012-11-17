@@ -1,0 +1,22 @@
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><?PHP echo $this->bc; ?></div>
+    <div id="copyBlock"> 
+      <!--<h2><?PHP echo $this->title; ?></h2>-->
+      <?PHP 
+	echo $this->copy_text; 
+	echo $this->form;
+	echo $this->slideshowOP;
+	echo $this->videoOP;
+	echo $this->calendar;
+	?>
+    </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

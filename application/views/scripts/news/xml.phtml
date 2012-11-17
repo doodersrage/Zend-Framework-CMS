@@ -1,0 +1,25 @@
+<?php if(count($this->pages) > 0): ?>
+<?php foreach($this->pages AS $key => $row): ?>
+<?PHP
+// grab dynamic route if assigned
+$routes = new Application_Model_Routes;
+$routesMapper = new Application_Model_RoutesMapper;
+if($row[route_id]){
+	$routesMapper->find($row[route_id],$routes);
+	if($routes->getUri()){
+		$lnkFnl = '/'.$routes->getUri().'/';
+	} else {
+		$lnkFnl = '/news/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+	}
+} else {
+	$lnkFnl = '/news/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name]))).'/'.$row[id].'/';
+}
+?>
+<url>
+  <loc>http://www.ynotpizza.com<?PHP echo $lnkFnl; ?></loc>
+  <lastmod><?PHP echo date('Y-m-d',strtotime($row[modified])); ?></lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<?php endforeach; ?>
+<?php endif; ?>

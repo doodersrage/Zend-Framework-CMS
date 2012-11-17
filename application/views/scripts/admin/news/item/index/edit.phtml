@@ -1,0 +1,25 @@
+<script src="/lib/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	var filemanager = '/lib/ckeditor/filemanager/';
+	var browser = filemanager + 'browser/default/browser.html';
+	var connector = filemanager + 'connectors/php/connector.php';
+	var upload = filemanager + 'connectors/php/upload.php';
+	if($('#description').length) {
+	  CKEDITOR.replace( 'description',
+	  {    
+		customConfig : this.config,
+		width:"750",
+		filebrowserBrowseUrl : browser +'?Connector=' + connector,
+		filebrowserImageBrowseUrl : browser + '?Type=Image&Connector=' + connector,
+		filebrowserFlashBrowseUrl : browser + '?Type=Flash&Connector=' + connector,
+		filebrowserUploadUrl : upload + '?type=Files',
+		filebrowserImageUploadUrl : upload + '?type=Images',
+		filebrowserFlashUploadUrl : upload + '?type=Flash'
+	  });
+	}
+});
+</script>
+
+<div id="adminLeftClm"> <?php echo $this->form ?> </div>
+<div id="adminRightClm"> <a href="/admin_news_item_index/?cid=<?PHP echo $this->ncid; ?>"><img src="/images/buttons/listing.png" alt="button 1" /></a> <a href="/admin_news_item_index/edit/?cid=<?PHP echo $this->ncid; ?>"><img src="/images/buttons/button1up.png" alt="button 2" /></a> </div>

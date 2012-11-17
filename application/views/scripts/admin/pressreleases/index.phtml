@@ -1,0 +1,39 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="pages">
+    <table class="adminListing">
+      <tr>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <?PHP $rowCnt = 0; ?>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+        <td><?=date("F j, Y",strtotime($row[date]))?></td>
+        <td><?=$row[title]?></td>
+        <td align="center"><a href="/admin_pressreleases/edit/?id=<?=$row[id]?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td align="center"><input type="checkbox" name="delete[]" value="<?=$row[id]?>" /></td>
+      </tr>
+      <tr>
+        <td id="exp<?PHP echo $row[id]; ?>" colspan="5"></td>
+      </tr>
+      <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+      <tr>
+        <td colspan="5" align="right"><input name="apply" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"> <a href="/admin_pressreleases/edit/"><img src="/images/buttons/button1up.png" alt="button 1" /></a> </div>

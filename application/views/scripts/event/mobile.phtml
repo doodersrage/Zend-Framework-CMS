@@ -1,0 +1,39 @@
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/event/">EVENTS</a></div>
+    <div id="eventsLst"> <?PHP //echo $this->calendar; ?>
+      <?php if(count($this->paginator) > 0): ?>
+      
+        <?PHP $rowCnt = 0; ?>
+        <?php foreach($this->paginator AS $key => $row): ?>
+		<?PHP
+        // grab dynamic route if assigned
+        $routes = new Application_Model_Routes;
+        $routesMapper = new Application_Model_RoutesMapper;
+        if($row[route_id]){
+            $routesMapper->find($row[route_id],$routes);
+            if($routes->getUri()){
+                $lnkFnl = '/'.$routes->getUri().'/';
+            } else {
+                $lnkFnl = '/event/name/'.strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id].'/';
+            }
+        } else {
+            $lnkFnl = '/event/name/'.strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id].'/';
+        }
+        ?>
+          <div class="eventDsp" style="padding:5px 0;"><?PHP if(!empty($row[image]) && file_exists(APP_BASE_PATH.'/upload/events/'.$row[image])) : ?><a href="<?PHP echo $lnkFnl; ?>"><img src="/image/?image=/upload/events/<?=$row[image]?>&width=150&height=145" alt="<?=$row[name]?>" /></a><?PHP endif ?><br />
+          <a href="<?PHP echo $lnkFnl; ?>">
+            <?=$row[name]?>
+            </a><br />
+			Start: <?=date("F j, Y",$row[start])?><br />
+			End: <?=date("F j, Y",$row[finish])?></div>
+        <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+        <?php endforeach; ?>
+      <?php else: ?>
+      No results.
+      <?php endif; ?>
+    </div>
+  </div>
+<div class="clear"></div>

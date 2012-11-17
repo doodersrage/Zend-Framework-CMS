@@ -1,0 +1,11 @@
+<div id="adminLeftClm">
+  <table class="formOP">
+    <?PHP
+$formData = unserialize($this->formdata);
+foreach($formData as $id => $value){
+	echo '<tr><th><strong>'.$id.':</strong> </th><td>'.$value.'</td></tr>';
+}
+?>
+  </table>
+</div>
+<div id="adminRightClm"> <a href="/admin_forms/"><img src="/images/buttons/listing.png" alt="button 1" /></a> </div>

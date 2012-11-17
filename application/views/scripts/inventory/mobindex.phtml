@@ -1,0 +1,70 @@
+  <div id="inventoryLeft">
+      <div class="headerText"><h1>SELECT FROM<br />
+        INVENTORY</h1></div>
+      <div id="invSrchFrm">
+        <form method="get" name="invSrch" action="/inventory/">
+          <label>Model Year</label>
+          <select id="from" name="from">
+            <?php echo $this->fromOpts; ?>
+          </select>
+          <label>TO</label>
+          <select id="to" name="to">
+            <?php echo $this->toOpts; ?>
+          </select>
+          <div class="fillBlocks">
+            <label>Vehicle Body Style</label>
+            <select id="style" name="style">
+              <option>All</option>
+              <?PHP echo $this->styleOpts; ?>
+            </select>
+            <label>Vehicle Make</label>
+            <select id="make" name="make">
+              <option>All</option>
+              <?PHP echo $this->makeOpts; ?>
+            </select>
+            <label>Vehicle Model</label>
+            <select id="model" name="model">
+              <option>All</option>
+              <?PHP echo $this->modelOpts; ?>
+            </select>
+            <label>Vehicle Color</label>
+            <select id="color" name="color">
+              <option>All</option>
+              <?PHP echo $this->colorOpts; ?>
+            </select>
+            <div id="invButWrap">
+              <input type="reset" value="Reset" id="reset" name="reset" />
+              <input type="submit" value="Search" id="submit" name="submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+  <div id="inventoryResults">
+    <?php if(count($this->paginator) > 0): ?>
+    <?php echo $this->paginator; ?>
+    <div class="clear"></div>
+    <?php foreach($this->paginator AS $key => $row): ?>
+    <?PHP
+
+  $imagesArr = explode(';',$row[images]);
+
+  echo '<div class="invRes" onclick="location.href=\'/inventory/vehicle/stocknum/'.$row[stockNum].'\'">
+  		<div class="invResImg">'.(count($imagesArr) > 0 ? $this->image($imagesArr[0],'/application/upload/invent/images/'.$imagesArr[0],array(),'100x100') : '&nbsp;').'</div>
+  		<div class="invResInfo">
+		'.$row[year].'<br />
+		'.$row[make].'<br />
+		'.$row[model].'<br />
+		'.$row[style].'<br />
+		'.$row[color].'
+		</div>
+		</div>';
+	?>
+    <?php endforeach; ?>
+    <?php echo $this->paginator; ?>
+    <div class="clear"></div>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+  </div>
+  <div class="clear"></div>

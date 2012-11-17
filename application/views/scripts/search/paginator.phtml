@@ -1,0 +1,42 @@
+<?php 
+// assign get vars str
+if($_GET){
+	$getVals = array();
+	foreach($_GET as $id => $val){
+		$getVals[] = $id.'='.$val;
+	}
+	$getVals = '?'.implode('&',$getVals);
+} else {
+	$getVals = '';
+}
+if ($this->pageCount): ?>
+
+<div class="paginationControl"> 
+  
+  <!-- Previous page link -->
+  
+  <?php if (isset($this->previous)): ?>
+  <a href="<?php echo $this->url(array('page' => $this->previous)); ?>/<?PHP echo $getVals; ?>"> &lt; Previous </a> |
+  <?php else: ?>
+  <span class="disabled">&lt; Previous</span> |
+  <?php endif; ?>
+  
+  <!-- Numbered page links -->
+  
+  <?php foreach ($this->pagesInRange as $page): ?>
+  <?php if ($page != $this->current): ?>
+  <a href="<?php echo $this->url(array('page' => $page)); ?>/<?PHP echo $getVals; ?>"> <?php echo $page; ?> </a> |
+  <?php else: ?>
+  <span id="current_page"><?php echo $page; ?></span> |
+  <?php endif; ?>
+  <?php endforeach; ?>
+  
+  <!-- Next page link -->
+  
+  <?php if (isset($this->next)): ?>
+  <a href="<?php echo $this->url(array('page' => $this->next)); ?>/<?PHP echo $getVals; ?>"> Next &gt; </a>
+  <?php else: ?>
+  <span class="disabled">Next &gt;</span>
+  <?php endif; ?>
+</div>
+<?php endif; ?>

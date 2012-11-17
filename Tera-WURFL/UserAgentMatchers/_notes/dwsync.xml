@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AlcatelUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951012847015" remote="129344927400000000" />
+<file name="AndroidUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951013227037" remote="129344927400000000" />
+<file name="AOLUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951013847072" remote="129344927400000000" />
+<file name="AppleUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951014317099" remote="129344927400000000" />
+<file name="BenQUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951014567113" remote="129344927400000000" />
+<file name="BlackBerryUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951014767125" remote="129344927400000000" />
+<file name="BotUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951015017139" remote="129344927400000000" />
+<file name="CatchAllUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951015267153" remote="129344927400000000" />
+<file name="ChromeUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951015877188" remote="129344927400000000" />
+<file name="DoCoMoUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951016357216" remote="129344927400000000" />
+<file name="FirefoxUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951016927248" remote="129344927400000000" />
+<file name="GrundigUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951017277268" remote="129344927400000000" />
+<file name="HTCUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951017687292" remote="129344927400000000" />
+<file name="KddiUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951017987309" remote="129344927400000000" />
+<file name="KonquerorUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951018387332" remote="129344927400000000" />
+<file name="KyoceraUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951018797355" remote="129344927400000000" />
+<file name="LGUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951019447393" remote="129344927400000000" />
+<file name="MitsubishiUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951019687406" remote="129344927400000000" />
+<file name="MotorolaUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951019937421" remote="129344927400000000" />
+<file name="MSIEUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951020287441" remote="129344927400000000" />
+<file name="NecUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951020657462" remote="129344927400000000" />
+<file name="NintendoUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951020927477" remote="129344927400000000" />
+<file name="NokiaUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951021177492" remote="129344927400000000" />
+<file name="OperaMiniUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951021507510" remote="129344927400000000" />
+<file name="OperaUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951021787526" remote="129344927400000000" />
+<file name="PanasonicUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951022017540" remote="129344927400000000" />
+<file name="PantechUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951022537569" remote="129344927400000000" />
+<file name="PhilipsUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951022747581" remote="129344927400000000" />
+<file name="PortalmmmUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951023107602" remote="129344927400000000" />
+<file name="QtekUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951023577629" remote="129344927400000000" />
+<file name="SafariUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951023977652" remote="129344927400000000" />
+<file name="SagemUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951024317671" remote="129344927400000000" />
+<file name="SamsungUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951024547684" remote="129344927400000000" />
+<file name="SanyoUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951024787698" remote="129344927400000000" />
+<file name="SharpUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951025027712" remote="129344927400000000" />
+<file name="SiemensUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951025647747" remote="129344927400000000" />
+<file name="SimpleDesktopUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951026067771" remote="129344927400000000" />
+<file name="SonyEricssonUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951026347787" remote="129344927400000000" />
+<file name="SPVUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951027287841" remote="129344927400000000" />
+<file name="ToshibaUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951027567857" remote="129344927400000000" />
+<file name="UserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951027977881" remote="129344927400000000" />
+<file name="VodafoneUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951031768097" remote="129344927400000000" />
+<file name="WindowsCEUserAgentMatcher.php" server="66.147.244.197//public_html/" local="129344951032238124" remote="129344927400000000" />
+</dwsync>

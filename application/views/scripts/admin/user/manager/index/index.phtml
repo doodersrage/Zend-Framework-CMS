@@ -1,0 +1,36 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="users">
+    <table class="adminListing">
+      <tr>
+        <th>Username</th>
+        <th>Last Login</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <?PHP $rowCnt = 0; ?>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+        <td><?=$row->username?></td>
+        <td><?=date("F j, Y, g:i a",strtotime($row->lastLogin))?></td>
+        <td align="center"><a href="/admin_user_manager_index/edit/?id=<?=$row->id?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td align="center"><input type="checkbox" name="delete[]" value="<?=$row->id?>" /></td>
+      </tr>
+      <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="4" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="right"><input name="apply" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"> <a href="/admin_user_manager_index/edit/"><img src="/images/buttons/button1up.png" alt="button 1" /></a> </div>

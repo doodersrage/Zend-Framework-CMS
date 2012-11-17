@@ -1,0 +1,82 @@
+<div id="inventoryBox">
+  <div id="inventoryLeft">
+    <div id="inventoryLeftPad">
+      <p class="invSrchTitle">SELECT FROM<br />
+        INVENTORY</p>
+      <div id="invSrchFrm">
+        <form method="post" name="invSrch">
+          <label>Model Year</label>
+          <select id="from" name="from">
+            <option>1990</option>
+            <option>2000</option>
+          </select>
+          -
+          <select id="to" name="to">
+            <option>1990</option>
+            <option>2000</option>
+          </select>
+          <div class="fillBlocks">
+            <label>Vehicle Type</label>
+            <select id="type" name="type">
+              <option>All</option>
+            </select>
+            <label>Brand</label>
+            <select id="brand" name="brand">
+              <option>All</option>
+            </select>
+            <label>Vehicle</label>
+            <select id="vehicle" name="vehicle">
+              <option>All</option>
+            </select>
+            <label>Price Range</label>
+            <select id="range" name="range">
+              <option>All</option>
+            </select>
+            <div id="invButWrap">
+              <input type="reset" value="Reset" id="reset" name="reset" />
+              <input type="submit" value="Search" id="submit" name="submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="inventoryMid">
+    <div id="invMidInner">
+      <div id="invMidLeft">
+        <p><strong>2007 Toyota FJ Cruiser</strong><br />
+          22,000 miles<br />
+          Drive 4WD<br />
+          Transmission Automatic<br />
+          Exterior Silver<br />
+          Interior Black Cloth<br />
+          EPA Mileage 17/21 MPG<br />
+          Stock #4916229<br />
+          Price $21,375</p>
+        <div id="invImgBlockWrap">
+          <p>Select View:</p>
+          <div id="invImgBox"><img height="54" width="89" alt="inv image" src="/images/invImage.jpg" /> <img height="54" width="89" alt="inv image" src="/images/invImage.jpg" /> <img height="54" width="89" alt="inv image" src="/images/invImage.jpg" /> <img height="54" width="89" alt="inv image" src="/images/invImage.jpg" /></div>
+        </div>
+      </div>
+      <div id="invMidRight"><img height="285" width="450" alt="inv large image" src="/images/invLargImg.jpg" /></div>
+    </div>
+  </div>
+  <div id="inventoryRight">
+    <form method="post" name="shareInv">
+      <label>Name</label>
+      <input type="text" name="shareName" />
+      <label>Phone</label>
+      <input type="text" name="sharePhone" />
+      <label>Email</label>
+      <input type="text" name="shareEmail" />
+      <input type="checkbox" value="1" name="shareContact" style="float: left;" />
+      <div id="rightShareContact">Please contact me about this vehicle.</div>
+      <label>Comment:</label>
+      <textarea rows="3" name="shareComment"></textarea>
+      <div id="invShareBut">
+        <input type="submit" name="submit" />
+      </div>
+    </form>
+  </div>
+</div>
+<p><img height="505" width="1024" alt="mid background image" src="/images/inventorybg.png" id="testbgimage" /></p>

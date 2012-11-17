@@ -1,0 +1,33 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="videos">
+    <table class="adminListing">
+      <tr>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Edit List Items</th>
+        <th>Modified</th>
+        <th>Delete</th>
+      </tr>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr>
+        <td><?=$row->name?></td>
+        <td align="center"><a href="/admin_slideshow/edit/?id=<?=$row->id?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td align="center"><a href="/admin_slideshow/img-list/?sid=<?=$row->id?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+        <td><?=$row->modified?></td>
+        <td align="center"><input type="checkbox" name="delete[]" value="<?=$row->id?>" /></td>
+      </tr>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+      <tr>
+        <td colspan="5" align="right"><input name="apply" type="image" src="/images/buttons/apply.png" /></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"> <a href="/admin_slideshow/edit/"><img src="/images/buttons/button1up.png" alt="button 1" /></a> </div>

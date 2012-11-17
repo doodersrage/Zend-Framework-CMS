@@ -1,0 +1,64 @@
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+<div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/event/">EVENTS</a></div>
+<div id="eventsLst">
+<?PHP echo $this->calendar; ?>
+  <?php if(count($this->paginator) > 0): ?>
+  <table class="eventListing">
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Start</th>
+      <th>End</th>
+    </tr>
+    <?PHP $rowCnt = 0; ?>
+    <?php foreach($this->paginator AS $key => $row): ?>
+	<?PHP
+    // grab dynamic route if assigned
+    $routes = new Application_Model_Routes;
+    $routesMapper = new Application_Model_RoutesMapper;
+    if($row[route_id]){
+        $routesMapper->find($row[route_id],$routes);
+        if($routes->getUri()){
+            $lnkFnl = '/'.$routes->getUri().'/';
+        } else {
+            $lnkFnl = '/event/name/'.strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id].'/';
+        }
+    } else {
+        $lnkFnl = '/event/name/'.strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[name])).'/'.$row[id].'/';
+    }
+    ?>
+    <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+      <td><a href="<?PHP echo $lnkFnl; ?>"><img src="/image/?image=/upload/events/<?=$row[image]?>&width=208&height=145" alt="<?=$row[name]?>" /></a></td>
+      <td><a href="<?PHP echo $lnkFnl; ?>">
+        <?=$row[name]?>
+        </a></td>
+      <td><?=date("F j, Y",$row[start])?></td>
+      <td><?=date("F j, Y",$row[finish])?></td>
+    </tr>
+    <?PHP
+
+	  $rowCnt++;
+
+	  if($rowCnt == 2) $rowCnt = 0;
+
+	  ?>
+    <?php endforeach; ?>
+    <tr>
+      <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+    </tr>
+  </table>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+      </div>
+    </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,24 @@
+<div class="copyBlock">
+  <div id="leftImages">
+    <?PHP
+  	foreach($this->smallItems as $item){
+		echo '<a rel="left_group" class="enlarge" href="/upload/invent/images/'.$item[images].'" title="'.$item[name].'"><img class="carouselItem" src="/image/?image=/upload/invent/images/'.$item[images].'&height=80&width=135" alt="'.$item[name].'" /></a>';
+	}
+  ?>
+  </div>
+  <div class="contentWrap" id="contentWrap">
+    <div id="copyBlock"> 
+<?PHP
+echo $this->message;
+?>
+    </div>
+  </div>
+  <div id="rightImages">
+    <?PHP
+  	foreach($this->rightItems as $item){
+		echo '<a rel="right_group" class="enlarge" href="/upload/invent/images/'.$item[images].'" title="'.$item[name].'"><img class="carouselItem" src="/image/?image=/upload/invent/images/'.$item[images].'&height=235&width=330" alt="'.$item[name].'" /></a>';
+	}
+  ?>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -1,0 +1,95 @@
+<div id="slideWrap">
+  <div id="slider" class="nivoSlider">
+    <img class="slideImage" src="/images/Cooler-Promo-Banner.jpg" height="327" width="761" alt="Ynot Cooler" />
+    <?PHP
+//  foreach($this->tenItems as $item){
+//	  echo '<img class="slideImage" src="/images/layout/slideshow/'.$item.'" alt="'.$item.'" />'."\n";
+//  }
+  ?>
+  </div>
+
+</div>
+<div class="copyBlock">
+  <div id="tickerTear">
+    <div id="tickerTearWrap">
+      <?PHP
+	$specials = explode("\n",Zend_Registry::get('Homepage Slider'));
+	foreach($specials as $id => $item){
+		echo '<div class="tickerItem" id="tickerItem'.$id.'" style="display: none;">
+				<p>'.$item.'</p>
+			  </div>';
+		if(count($specials) == 1) echo '<div class="tickerItem" id="tickerItem'.($id+1).'" style="display: none;">
+				<p>'.$item.'</p></div>';
+	}
+	?>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="pad"></div>
+<div class="copyBlock">
+  <div id="videoDeck"> <?PHP echo $this->videoPlylst; ?> </div>
+  <div id="chalkBoard">
+  <img src="/images/seals/bov-seal.png" width="125" height="83" alt="best of virginia 2012 logo image" />
+  <img src="/images/seals/Best-of-2012-Ches-Silver.png" width="125" height="98" alt="best of image" />
+  <div class="clear"></div>
+  <!--<img src="/images/seals/Best-of-2012-Norfolk-Bronze.png" width="125" height="98" alt="best of image" />-->
+  <img src="/images/seals/Best-of-2012-VB-Gold.png" width="125" height="98" alt="best of image" />
+  <img src="/images/seals/Best-of-2012-Norfolk-Silver.png" width="125" height="99" alt="best of image" />
+  <div class="clear"></div>
+  <!--<img src="/images/seals/Best-of-2012-VB-Bronze.png" width="125" height="98" alt="best of image" />-->
+  <img src="/images/seals/Best-of-2012-Ches-Gold.png" width="125" height="101" alt="best of image" />
+  <div class="clear"></div>
+  </div>
+  <div id="communityNotes">
+    <div id="communityNotesWrap">
+      <div id="communityNotesBlock"> <?PHP echo $this->neighborEvents; ?> </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="pad"></div>
+<div class="copyBlock">
+  <div id="footLeftBlock">
+    <div id="commentsBlock">
+      <div id="commentsHeadBox">
+        <h2>Customer Comments:</h2>
+        <a href="/content/contact-ynot-locations/">Click here to submit your own.</a> </div>
+      <div id="commentsBlockWrap">
+        <div class="comment">
+          <p>"The pizza was to die for! And the Calzone was off the hook!"</p>
+          <div class="commentSig"> Rudy, VA. Beach </div>
+        </div>
+        <div class="comment">
+          <p>"I'm an original Sicilian, and this is the first place I've found that does Italian food right."</p>
+          <div class="commentSig"> Angelina, VA. Beach </div>
+        </div>
+        <div class="comment">
+          <p>"The best desserts around! Sometimes I forget to order an entree."</p>
+          <div class="commentSig"> Jimmy, Chesapeake </div>
+        </div>
+      </div>
+    </div>
+    <div id="fromYnotBlock">
+      <div id="fromYnotCopy">
+        <h2>From all of us at Ynot Pizza, welcome to our table!</h2>
+        <p>As a "Best of the Best" in Hampton Roads winner year after year, we are committed to offering you the finest family atmosphere, authentic Italian cuisine and hospitality, and the finest quality food and service possible.</p>
+        <p>Whether you enjoy our hand-tossed pizzas, calzone and stromboli, or you wish to sample our world class traditional Italian pastas, breads, pastries, salads, soups and surprises – our wish for you is simple! May you have an enjoyable time at our humble table, never leave it hungry and visit us again and again!<br />
+          Thank you, The DiSilvestro Family</p>
+      </div>
+    </div>
+  </div>
+  <div id="footRightBlock">
+    <div id="announcementsBlock">
+    <div id="accouncementHeader"><h2>YNot BLOG!</h2></div>
+    <div id="announcementsBoxWrap"><?PHP echo $this->announcements; ?></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript" src="http://j.clickdensity.com/cr.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  var clickdensity_keyElement = 'kvalue';
+//]]>
+</script>

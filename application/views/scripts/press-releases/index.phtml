@@ -1,0 +1,33 @@
+<div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/press-releases/">Press Releases</a></div>
+<p><img width="754" height="21" alt="" src="/upload/pages/image/nav30_news_releases.png" /></p>
+<div id="newsLst">
+  <?php if(count($this->paginator) > 0): ?>
+  <table class="pressListing">
+    <?PHP $rowCnt = 0; ?>
+    <?php foreach($this->paginator AS $key => $row): ?>
+    <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+      <?PHP
+	if($row[filelnk] != ''){
+		$pgLnk = '<a href="'.$row[filelnk].'" target="_blank">'.date("n/j/Y",strtotime($row[date])).' - '.$row[title].'</a>';
+	} else {
+		$pgLnk = '<a href="/press-releases/item/'.strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[title])).'/'.$row[id].'/">'.date("n/j/Y",strtotime($row[date])).' - '.$row[title].'</a>';
+	}
+	?>
+      <td><?=$pgLnk?>
+        <p>
+          <?=substr(strip_tags($row[copy_text]),0,200)?>
+          ...</p></td>
+    </tr>
+    <?PHP
+	  $rowCnt++;
+	  if($rowCnt == 2) $rowCnt = 0;
+	  ?>
+    <?php endforeach; ?>
+    <tr>
+      <td colspan="5" align="right"><?php echo $this->paginator; ?></td>
+    </tr>
+  </table>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>

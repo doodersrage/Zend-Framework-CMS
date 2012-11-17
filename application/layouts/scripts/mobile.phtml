@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noodp,NOYDIR" />
+<link rel="apple-touch-icon" href="/images/Ynot-Icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png" />
+<link rel="apple-touch-startup-image" media="screen and (max-device-width: 320px)" href="/images/Ynot-Startup-320x460.png">
+<link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="/startup_640x960.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<?php 
+
+// print header meta
+echo $this->headMeta();
+
+// print header title
+echo $this->headTitle(); 
+
+// link stylesheets
+echo $this->headLink();
+echo $this->minifyHeadLink()->appendStylesheet('/css/reset.css')
+							->appendStylesheet('/css/mobile.css');
+
+// link js documents
+echo $this->headScript()."\n";
+echo $this->minifyHeadScript()
+						->appendFile('/jwplayer/jwplayer.js')
+						->appendFile('/js/mobile/bubble.js')
+						->appendFile('/js/default-mobile.js')
+						->appendFile('/js/jquery.validate.min.js'); 
+?>
+<meta name="ICBM" content="37.0625,-95.677068" />
+<meta name="geo.position" content="37.0625;-95.677068">
+<meta name="geo.placename" content="Virginia Beach, Virginia, United States">
+<meta name="geo.region" content="USA">
+</head>
+<body>
+<div id="container">
+  <div id="mobileHead"> <a href="/"><img id="logoImage" src="/images/mobile/ynotlogo.png" width="154" height="165" alt="ynot logo image"></a> <a href="/content/pizza-coupons-specials/"><img id="specialsButton" src="/images/mobile/specials.png" width="129" height="39" alt="specials button image"></a></div>
+  <div id="mobileContent" data-role="content"> <?php echo $this->layout()->content; ?> </div>
+  <div class="clear"></div>
+  <div id="mobileMenu">
+    <?PHP $this->mobileBuildMenu(Zend_Registry::get('Content ID')); ?>
+  </div>
+  <div id="mobileFooter">
+    <div id="footerSocial"> <a target="_blank" href="http://twitter.com/<?PHP echo Zend_Registry::get('Twitter Handle'); ?>"><img src="/images/layout/twitter.png" width="34" height="34" alt="twitter icon"></a> <a href="http://www.facebook.com/<?PHP echo Zend_Registry::get('Facebook Handle'); ?>" target="_blank"><img src="/images/layout/facebook.png" width="35" height="34" alt="facebook icon"></a><a href="http://www.youtube.com/user/YNotPizza757" target="_blank"><img src="/images/Ynto-YouTube.png" width="33" height="33" alt="facebook"></a></div>
+  </div>
+  <div id="footerHours">
+    <p>HOURS:<br>
+      Sun - Thurs. 11am - 11pm<br>
+      Fri. & Sat. 11am - Midnight</p>
+  </div>
+  <div class="clear"></div>
+  <div id="searchFrm">
+    <form method="get" name="searchFrm" action="/search/">
+      <label for="searchval">Search:</label>
+      <input name="searchVal" id="searchval" type="text" />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+  </div>
+  <div id="footerLinks"><a href="/content/ynot-feedback/">Feedback</a> | <a href="/content/ynot-email-club/">Email Club</a> | <a href="/content/ynot-employment/">Employment</a> | <a href="/content/ynot-gift-cards/">Gift Cards</a> | <a href="/sitemap/">Sitemap</a></div>
+  <div id="footerCopyWr">
+    <p>&copy;<?PHP echo date('Y'); ?> YNot Pizza. All rights reserved. Prices and menu subject to change without notice. <a href="<?PHP 
+  if(strpos($_SERVER["REQUEST_URI"],'mobSwitch')) {
+	  $newStr = str_replace(array('=2'),array('=1'),$_SERVER["REQUEST_URI"]);
+	  echo $newStr;
+  } else {
+	  echo $_SERVER["REQUEST_URI"].'?mobSwitch=1'; 
+  }
+  ?>" rel="nofollow" data-ajax="false">View Full Site</a></p>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?PHP echo Zend_Registry::get('Google Analytics Key'); ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

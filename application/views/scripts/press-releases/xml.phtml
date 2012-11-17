@@ -1,0 +1,17 @@
+<?php if(count($this->pages) > 0): ?>
+<?php foreach($this->pages AS $key => $row): ?>
+<?PHP
+if($row[filelnk] != ''){
+	$pgLnk = $row[filelnk];
+} else {
+	$pgLnk = 'http://www.ynotpizza.com/press-releases/item/'.$this->cleanDups(strtolower(preg_replace("/[^A-Za-z0-9\s\s+]/","-",$row[title]))).'/'.$row[id].'/';
+}
+?>
+<url>
+  <loc><?PHP echo $pgLnk; ?></loc>
+  <lastmod><?PHP echo date('Y-m-d',strtotime($row[modified])); ?></lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<?php endforeach; ?>
+<?php endif; ?>

@@ -1,0 +1,28 @@
+<?php if(count($this->paginator) > 0): ?>
+<form method="post" name="pages">
+  <table class="adminListing" style="float:right;">
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Edit</th>
+    </tr>
+    <?PHP $rowCnt = 0; ?>
+    <?php foreach($this->paginator AS $key => $row): ?>
+    <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+      <td><?=$row[name]?></td>
+      <td><?PHP if($row[type] == 'upload') echo '<a href="'.$row[defin].'" target="_blank">'.$row[defin].'</a>'; else echo strip_tags($row[defin]); ?></td>
+      <td align="center"><a href="/admin_config/edit/?id=<?=$row[id]?>"><img src="/images/admin/pencil.png" alt="edit" /></a></td>
+    </tr>
+    <?PHP
+
+	  $rowCnt++;
+
+	  if($rowCnt == 2) $rowCnt = 0;
+
+	  ?>
+    <?php endforeach; ?>
+  </table>
+</form>
+<?php else: ?>
+No results.
+<?php endif; ?>

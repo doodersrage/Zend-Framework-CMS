@@ -1,0 +1,123 @@
+<div id="inventoryBox">
+  <div id="inventoryLeft">
+    <div id="inventoryLeftPad">
+      <p class="invSrchTitle">SELECT FROM<br />
+        INVENTORY</p>
+      <div id="invSrchFrm">
+        <form method="get" name="invSrch" action="/inventory/">
+          <label>Model Year</label>
+          <select id="from" name="from">
+            <?php echo $this->fromOpts; ?>
+          </select>
+          -
+          <select id="to" name="to">
+            <?php echo $this->toOpts; ?>
+          </select>
+          <div class="fillBlocks">
+            <label>Vehicle Body Style</label>
+            <select id="style" name="style">
+              <option>All</option>
+              <?PHP echo $this->styleOpts; ?>
+            </select>
+            <label>Vehicle Make</label>
+            <select id="make" name="make">
+              <option>All</option>
+              <?PHP echo $this->makeOpts; ?>
+            </select>
+            <label>Vehicle Model</label>
+            <select id="model" name="model">
+              <option>All</option>
+              <?PHP echo $this->modelOpts; ?>
+            </select>
+            <label>Vehicle Color</label>
+            <select id="color" name="color">
+              <option>All</option>
+              <?PHP echo $this->colorOpts; ?>
+            </select>
+            <div id="invButWrap">
+              <input type="reset" value="Reset" id="reset" name="reset" />
+              <input type="submit" value="Search" id="submit" name="submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="inventoryMid">
+    <div id="invMidInner">
+      <div id="invMidLeft">
+        <p><strong><?PHP echo $this->inventory->year . ' ' . $this->inventory->make . ' ' . $this->inventory->model; ?></strong><br />
+          <?PHP echo $this->inventory->style; ?><br />
+          <?PHP echo $this->inventory->color; ?></p>
+        <div id="invImgBlockWrap">
+          <p>Select View:</p>
+          <div id="invImgBox">
+            <?PHP
+
+		  if($this->inventory->images){
+			  $images = explode(';',$this->inventory->images);
+			  foreach($images as $image){
+				  echo $this->image($image,'/application/upload/invent/images/'.$image,array(),'54x89');
+			  }
+			  $imgCnt = count($images)-1;
+			  $imgRand = rand(0,$imgCnt);
+			  $largeImage = $this->image($images[$imgRand],'/application/upload/invent/images/'.$images[$imgRand],array(),'450x285');
+		  }
+
+		  ?>
+          </div>
+        </div>
+      </div>
+      <div id="invMidRight">
+        <?PHP if(isset($largeImage)) echo $largeImage; ?>
+      </div>
+    </div>
+  </div>
+  <div id="inventoryRight">
+    <div id="validate" style="display:none">
+      <h4>There are serious errors in your form submission, please see below for details.</h4>
+      <ol>
+        <li>
+          <label for="shareName" class="error">Please enter your name</label>
+        </li>
+        <li>
+          <label for="shareEmail" class="error">Please enter your email address</label>
+        </li>
+        <li>
+          <label for="sharePhone" class="error">Please enter your phone <b>number</b></label>
+        </li>
+        <li>
+          <label for="shareComment" class="error">Please enter your comment</label>
+        </li>
+      </ol>
+    </div>
+    <p class="invSrchTitle">REQUEST INFO</p>
+    <form method="post" name="shareInv" id="shareInv" action="/form-proc/vehicle/">
+      <label>Name</label>
+      <input type="text" name="shareName" id="shareName" class="required" />
+      <label>Phone</label>
+      <input type="text" name="sharePhone" id="sharePhone" class="required" />
+      <label>Email</label>
+      <input type="text" name="shareEmail" id="shareEmail" class="required" />
+      <input type="checkbox" value="1" name="shareContact" id="shareContact" style="float: left;" />
+      <div id="rightShareContact">Please contact me about this vehicle.</div>
+      <label>Comment:</label>
+      <textarea rows="3" name="shareComment" id="shareComment" class="required"></textarea>
+      <input type="hidden" name="vehicle" id="vehicle" value="<?PHP echo 'Year: '.trim($this->inventory->year) . ' Make: ' . trim($this->inventory->make) . ' Model: ' . trim($this->inventory->model) . ' Style: ' . trim($this->inventory->style) . ' StockNum: ' . trim($this->inventory->stockNum); ?>" />
+      <div id="invShareBut">
+        <input type="submit" name="submit" value="submit" />
+      </div>
+    </form>
+  </div>
+</div>
+<div id="tabsWrap">
+  <div id="tabs"> <img src="/images/tabs.png" alt="our process tabs" name="tabRow" width="566" height="48" border="0" usemap="#tabRowMap" id="tabRow" />
+    <map name="tabRowMap" id="tabRowMap">
+      <area shape="rect" coords="15,4,319,36" href="javascript: void(0);" onclick="switchTab(1)" />
+      <area shape="rect" coords="328,4,401,40" href="javascript: void(0);" onclick="switchTab(2)" />
+      <area shape="rect" coords="406,2,481,38" href="javascript: void(0);" onclick="switchTab(3)" />
+      <area shape="rect" coords="485,-1,565,40" href="javascript: void(0);" onclick="switchTab(4)" />
+    </map>
+    <img style="display:block" src="/images/tab1.png" alt="info tab one" name="tab1" width="991" height="150" id="tab1" class="tabs" /> <img src="/images/tab2.png" alt="info tab one" name="tab1" width="485" height="146" id="tab2" class="tabs" /> <img src="/images/tab3.png" alt="info tab one" name="tab1" width="524" height="146" id="tab3" class="tabs" /> <img src="/images/tab4.png" alt="info tab one" name="tab1" width="453" height="146" id="tab4" class="tabs" /></div>
+</div>
+<p><img height="505" width="1024" alt="mid background image" src="/images/inventorybg.png" id="testbgimage" /></p>

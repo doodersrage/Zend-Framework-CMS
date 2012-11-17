@@ -1,0 +1,46 @@
+  <div class="searchResults">
+    <?php if(count($this->pagepaginator) > 0): ?>
+    <?php echo $this->pagepaginator; ?>
+    <div class="clear"></div>
+    <?php foreach($this->pagepaginator AS $key => $row): ?>
+    <div class="srchRslt">
+      <?PHP
+
+	echo '<a href="/content/'.strtolower(str_replace(' ','-',$row[title])).'/">'.$row[title].'</a>';
+
+	?>
+    </div>
+    <?php endforeach; ?>
+    <?php echo $this->pagepaginator; ?>
+    <div class="clear"></div>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+  </div>
+  <div class="searchResults">
+    <?php if(count($this->paginator) > 0): ?>
+    <?php echo $this->paginator; ?>
+    <div class="clear"></div>
+    <?php foreach($this->paginator AS $key => $row): ?>
+    <?PHP
+
+  $imagesArr = explode(';',$row[images]);
+
+  echo '<div class="invRes" onclick="location.href=\'/inventory/vehicle/stocknum/'.$row[stockNum].'\'">
+  		<div class="invResImg">'.(count($imagesArr) > 0 ? $this->image($imagesArr[0],'/application/upload/invent/images/'.$imagesArr[0],array(),'100x100') : '&nbsp;').'</div>
+  		<div class="invResInfo">
+		'.$row[year].'<br />
+		'.$row[make].'<br />
+		'.$row[model].'<br />
+		'.$row[style].'
+		</div>
+		</div>';
+
+  ?>
+    <?php endforeach; ?>
+    <?php echo $this->paginator; ?>
+    <div class="clear"></div>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+  </div>

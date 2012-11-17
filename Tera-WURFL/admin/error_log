@@ -1,0 +1,2 @@
+[17-Nov-2010 12:34:26] PHP Warning:  require_once() [<a href='function.require-once'>function.require-once</a>]: Filename cannot be empty in /home8/studipg1/public_html/Tera-WURFL/TeraWurfl.php on line 21
+[17-Nov-2010 12:34:26] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '' (include_path='.:/usr/lib64/php:/usr/lib/php') in /home8/studipg1/public_html/Tera-WURFL/TeraWurfl.php on line 21

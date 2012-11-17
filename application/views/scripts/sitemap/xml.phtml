@@ -1,0 +1,11 @@
+<?php if(count($this->pages) > 0): ?>
+<?php foreach($this->pages AS $key => $row): ?>
+
+<url>
+  <loc><?PHP echo '/content/'.strtolower(str_replace(' ','-',$row[title])).'/'; ?></loc>
+  <lastmod><?PHP echo date('Y-m-d',strtotime($row[modified])); ?></lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<?php endforeach; ?>
+<?php endif; ?>

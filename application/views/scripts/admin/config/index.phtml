@@ -1,0 +1,37 @@
+<div id="adminLeftClm">
+  <?php if(count($this->paginator) > 0): ?>
+  <form method="post" name="pages">
+    <table class="adminListing">
+      <tr>
+        <th>&nbsp;</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <?PHP $rowCnt = 0; ?>
+      <?php foreach($this->paginator AS $key => $row): ?>
+      <tr<?PHP if($rowCnt == 1) echo ' class="altRow" '; ?>>
+        <td><div class="plusSmbl" id="<?=$row[id]?>" onclick="$('#exp<?=$row[id]?>').toggle();"></div></td>
+       <td><?=$row[name]?></td>
+        <td><?=$row[desc]?></td>
+      </tr>
+      <tr>
+        <td id="exp<?PHP echo $row[id]; ?>" colspan="3" style="display:none"></td>
+      </tr>
+      <?PHP
+
+	  $rowCnt++;
+
+	  if($rowCnt == 2) $rowCnt = 0;
+
+	  ?>
+      <?php endforeach; ?>
+      <tr>
+        <td colspan="4" align="right"><?php echo $this->paginator; ?></td>
+      </tr>
+    </table>
+  </form>
+  <?php else: ?>
+  No results.
+  <?php endif; ?>
+</div>
+<div id="adminRightClm"></div>

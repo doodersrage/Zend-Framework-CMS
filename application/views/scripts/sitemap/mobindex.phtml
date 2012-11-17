@@ -1,0 +1,29 @@
+    <div class="headerText"><h1>Sitemap</h1></div>
+  <div class="searchResults">
+    <?php if(count($this->pages) > 0): ?>
+    <?php foreach($this->pages AS $key => $row): ?>
+    <div class="srchRslt">
+      <?PHP
+
+	echo '<a href="/content/'.strtolower(str_replace(' ','-',$row[title])).'/" title="'.$row[title].'">'.$row[title].'</a>';
+
+	?>
+    </div>
+    <?php endforeach; ?>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+    <?php if(count($this->vehicles) > 0): ?>
+    <?php foreach($this->vehicles AS $key => $row): ?>
+    <div class="srchRslt">
+      <?PHP
+
+	echo '<a href="/inventory/vehicle/stocknum/'.$row[stockNum].'/" title="'.strtolower(trim($row[year]).' '.trim($row[make]).' '.trim($row[model]).' '.trim($row[style])).' '.trim($row[color]).'">'.strtolower(trim($row[year]).' '.trim($row[make]).' '.trim($row[model]).' '.trim($row[style]).' '.trim($row[color])).'</a>';
+
+	?>
+    </div>
+    <?php endforeach; ?>
+    <?php else: ?>
+    No results.
+    <?php endif; ?>
+  </div>

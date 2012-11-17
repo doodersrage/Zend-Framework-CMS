@@ -1,0 +1,20 @@
+<div class="copyBlock">
+  <?PHP
+  	echo $this->leftImages();
+  ?>
+  <div class="contentWrap" id="contentWrap<?PHP echo $this->id; ?>">
+    <div id="breadCrumbs"><a href="/">HOME</a> &raquo; <a href="/news/">NEWS</a> &raquo; <?PHP echo $this->bc; ?></div>
+    <div id="copyBlock">
+      <h2><?PHP echo $this->title; ?></h2>
+      <div id="newsletterCopy">
+      <?PHP 
+echo $this->copy_text; 
+?>
+	</div>
+    </div>
+  </div>
+  <?PHP
+  	echo $this->rightImages();
+  ?>
+  <div class="clear"></div>
+</div>

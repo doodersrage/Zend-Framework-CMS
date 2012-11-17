@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<?php 
+
+// print header meta
+echo $this->headMeta()."\n";
+
+// print header title
+echo $this->headTitle()."\n"; 
+
+// link stylesheets
+echo $this->minifyHeadLink()->appendStylesheet('/css/reset.css')
+							->appendStylesheet('/css/default.css')
+							->appendStylesheet('/css/superfish-front.css')
+							->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.11.custom.css')
+							->appendStylesheet('/css/jScrollPane.css')
+							->appendStylesheet('/css/print.css','print')
+							->appendStylesheet('/css/drawzing/MyFontsWebfontsOrderM2891555.css')."\n";
+echo $this->headLink()->appendStylesheet('/css/erbar/MyFontsWebfontsOrderM2973350.css');
+
+// link js documents
+echo $this->headScript()."\n";
+
+?>
+<!--[if gte IE 8]>
+<style>
+.childDDMenu a{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+</style>
+<![endif]-->
+<meta name="ICBM" content="37.0625,-95.677068" />
+<meta name="geo.position" content="37.0625;-95.677068">
+<meta name="geo.placename" content="Virginia Beach, Virginia, United States">
+<meta name="geo.region" content="USA">
+<link rel="alternate" type="application/rss+xml" title="<?PHP echo Zend_Registry::get('Site Name'); ?> Blog" href="<?PHP echo $this->baseUrl(); ?>blog/feed/" />
+</head>
+
+<body>
+<div id="containerWrap">
+  <div id="content"><?php echo $this->layout()->content; ?></div>
+  <div id="footer"><img src="/images/layout/footdiv.png" width="1009" height="8" alt="footer div">
+    <div id="footerCopy">
+      <div id="footerCopyTop">
+        <div id="footerLinks"><a href="/content/contact-ynot-locations/">Feedback</a> | <a href="/content/ynot-email-club/">Email Club</a> | <a href="/content/ynot-employment/">Employment</a> | <a href="/content/ynot-gift-cards/">Gift Cards</a> | <a href="/sitemap/">Sitemap</a> | <a href="<?PHP 
+  if(strpos($_SERVER["REQUEST_URI"],'mobSwitch')) {
+  $newStr = str_replace(array('=1'),array('=2'),$_SERVER["REQUEST_URI"]);
+  echo $newStr;
+  } else {
+  echo $_SERVER["REQUEST_URI"].'?mobSwitch=2'; 
+  }?>" rel="nofollow">Mobile Site</a></div>
+  		<div style="float:right;">
+        <p>Designed and developed by <a href="http://www.studiocenter.com/" target="_blank" title="audio production | video production | voice over talent | on camera talent | motion graphics | new media | web design | web video"><img src="/images/sclogo.png" alt="studio center logo image" width="115" height="28" /></a></p></div>
+        <div class="clear"></div>
+      </div>
+      <div id="footerCopyBottom">&copy; YNOT Pizza. All Rights Reserved. Prices and menu subject to change without notice.</div>
+    </div>
+  </div>
+  <div id="headerWrap">
+    <div id="header"><a title="<?PHP echo Zend_Registry::get('Site Name'); ?>" href="/"><img src="/images/ynotdeliverslogo.png" alt="<?PHP echo Zend_Registry::get('Site Name'); ?>" width="395" height="192" id="logo"/></a> <img src="/images/ordernow.png" alt="Order pizza and Italian cuisine online now!" width="169" height="86" id="orderOnlineHead"/> <img src="/images/layout/locationsbox.png" alt="Locations box" width="360" height="97" usemap="#locationsBoxHeadMap" id="locationsBoxHead"/>
+      <map name="locationsBoxHeadMap">
+        <area shape="rect" coords="2,21,174,53" href="https://ynot-norfolk.foodtecsolutions.com/menu" alt="ghent location" target="_blank">
+        <area shape="rect" coords="183,22,364,55" href="https://ynot-colonial.foodtecsolutions.com/menu" alt="great neck location" target="_blank">
+        <area shape="rect" coords="1,61,176,94" href="https://ynot-vbeach.foodtecsolutions.com/menu" alt="kempsville location" target="_blank">
+        <area shape="rect" coords="183,61,360,94" href="https://ynot-chesapeake.foodtecsolutions.com/menu" alt="greenbrier location" target="_blank">
+      </map>
+      <?PHP $this->buildMenu(); ?>
+      <div id="topInput">
+        <div id="topInputWrap">
+          <div id="topSearch">
+            <div class="topHead"> <img src="/images/layout/find.png" width="28" height="13" alt="Find"/></div>
+            <div class="topBox">
+              <form method="get" action="/search/">
+                <input type="text" name="searchVal" id="topSearh" value=""/>
+              </form>
+            </div>
+            <!-- AddThis Button BEGIN -->
+            <div id="topShare">
+              <div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_preferred_1"></a> <a class="addthis_button_preferred_2"></a> <a class="addthis_button_preferred_3"></a> <a class="addthis_button_preferred_4"></a> <a class="addthis_button_compact"></a> <a class="addthis_counter addthis_bubble_style"></a> </div>
+            </div>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ded4604729a07fe"></script> 
+            <!-- AddThis Button END -->
+            <div style="width:155px;margin-top:5px;">
+              <div style="float: left; width: 85px; ;"> 
+                <script type="text/javascript">document.write("<iframe src=\"http:\/\/www.facebook.com\/plugins\/like.php?app_id=145993388812284&amp;href="+document.URL+"&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:100px; height:30px;\" allowTransparency=\"true\"><\/iframe>");</script> 
+              </div>
+              <div style="float: left; width: 70px; ;"><!-- Place this tag where you want the +1 button to render -->
+<div class="g-plusone" data-size="small"></div>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+              </div>
+              <div style="clear: both; ;"></div>
+            </div>
+          </div>
+          <div id="topEmailLst">
+            <div id="topEmailFrm">
+              <div class="topHead" id="topEmailBlockWrap"><img src="/images/layout/getemails.png" width="139" height="28" alt="Get our emails!"/></div>
+              <div id="topEmailStamp"><img src="/images/layout/stamp.png" width="54" height="80" alt="stamp"></div>
+              <div id="topEmailsBlock"> <a href="https://ynot-norfolk.foodtecsolutions.com/signup" target="_blank">Ghent</a> <a href="https://ynot-colonial.foodtecsolutions.com/signup" target="_blank">Great Neck</a> <a href="https://ynot-vbeach.foodtecsolutions.com/signup" target="_blank">Kempsville</a> <a href="https://ynot-chesapeake.foodtecsolutions.com/signup" target="_blank">Greenbrier</a> </div>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div id="topSocial"><a href="http://twitter.com/<?PHP echo Zend_Registry::get('Twitter Handle'); ?>" target="_blank"><img src="/images/layout/twitter.png" width="34" height="34" alt="twitter"></a> <a href="http://www.facebook.com/<?PHP echo Zend_Registry::get('Facebook Handle'); ?>" target="_blank"><img src="/images/layout/facebook.png" width="35" height="34" alt="facebook"></a><a href="http://www.youtube.com/user/YNotPizza757" target="_blank"><img src="/images/Ynto-YouTube.png" width="33" height="33" alt="facebook"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?PHP
+echo $this->minifyHeadScript()->appendFile('/js/jquery-ui-1.8.11.custom.min.js')
+							  ->appendFile('/jwplayer/jwplayer.js')
+							  ->appendFile('/js/jquery.mousewheel-3.0.4.pack.js')
+							  ->appendFile('/js/jScrollPane.js')
+							  ->appendFile('/js/hoverIntent.js')
+							  ->appendFile('/js/jquery.imgpreload.min.js')
+							  ->appendFile('/js/default.js'); 
+?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?PHP echo Zend_Registry::get('Google Analytics Key'); ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
